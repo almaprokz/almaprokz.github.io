@@ -30,6 +30,7 @@ font-weight:700;
 
 .hero{
 padding: 100px 0;
+text-align:left;
 }
 
 .hero-text{
@@ -47,7 +48,7 @@ font-size:16px;
 }
 
 .hero{
-padding:150px 0 100px 0;
+padding:80px 0 120px 0;
 }
 
 .hero-inner{
