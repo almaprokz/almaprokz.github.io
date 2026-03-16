@@ -497,8 +497,9 @@ box-shadow:0 10px 20px rgba(0,0,0,0.06);
 
 .card-top{
 display:flex;
-gap:15px;
+gap:16px;
 align-items:center;
+margin-bottom:6px;
 }
 
 .card-top img{
@@ -553,17 +554,16 @@ color:#9ca3af;
 
 .card-divider{
 border-top:2px solid #2b5fb8;
-margin:16px 0 12px 0;
-opacity:0.3;
+opacity:0.35;
+margin:18px 0 12px 0;
 }
 
 /* PROFILE LINK */
 
-.profile-link{
-color:#2b5fb8;
-text-decoration:none;
-font-weight:500;
-font-size:14px;
+.card-divider{
+border-top:2px solid #2b5fb8;
+opacity:0.35;
+margin:18px 0 12px 0;
 }
 
 .profile-link:hover{
