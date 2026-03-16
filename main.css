@@ -114,11 +114,11 @@ padding:12px 24px;
 border-radius:6px;
 text-decoration:none;
 font-weight:600;
-transition:all 0.2s ease;
+transition:0.2s;
 }
 
 .btn-primary:hover{
-background:#1f4fc4;
+background:#1f4fa3;
 transform:translateY(-1px);
 }
 
