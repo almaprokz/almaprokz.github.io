@@ -13,7 +13,8 @@ padding:20px;
 
 .header{
 background:#ffffff;
-border-bottom:1px solid #e6e6e6;
+border-bottom:1px solid #e5e7eb;
+background:#f7f7f7;
 }
 
 .header-inner{
@@ -29,6 +30,7 @@ font-weight:700;
 }
 
 .hero{
+background:#f7f7f7;
 padding: 100px 0;
 text-align:left;
 }
