@@ -192,3 +192,37 @@ font-size:14px;
 section{
 padding:80px 0;
 }
+
+.standard{
+padding:80px 0;
+background:#ffffff;
+}
+
+.standard-inner{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+gap:80px;
+}
+
+.standard-text h2{
+margin-bottom:10px;
+}
+
+.standard-text p{
+color:#555;
+}
+
+.standard-list{
+border-left:2px solid #e5e7eb;
+padding-left:30px;
+}
+
+.standard-list ul{
+list-style:none;
+padding:0;
+}
+
+.standard-list li{
+margin-bottom:12px;
+}
