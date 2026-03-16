@@ -14,7 +14,12 @@ padding:20px;
 .header{
 background:#f7f7f7;
 border-bottom:1px solid #e5e7eb;
-background:#f7f7f7;
+padding:18px 0;
+
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 8px rgba(0,0,0,0.04);
 }
 
 .header-inner{
@@ -27,6 +32,11 @@ padding:16px 0;
 .logo{
 font-size:22px;
 font-weight:700;
+cursor:pointer;
+}
+
+.logo:hover{
+opacity:0.8;
 }
 
 .hero{
