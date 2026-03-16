@@ -486,7 +486,7 @@ border:1px solid #e5e7eb;
 border-radius:12px;
 padding:24px;
 display:flex;
-gap:18px;
+gap:16px;
 align-items:flex-start;
 transition:all .25s ease;
 }
@@ -502,6 +502,10 @@ height:72px;
 border-radius:10px;
 object-fit:cover;
 flex-shrink:0;
+}
+
+.nanny-info{
+flex:1;
 }
 
 .nanny-info h3{
@@ -530,14 +534,58 @@ padding-top:12px;
 
 .nanny-info a{
 color:#2b5fb8;
-text-decoration:none;
 font-weight:500;
+text-decoration:none;
+transition:0.2s;
 }
 
+.nanny-info a:hover{
+text-decoration:underline;
+}
+
+/* nannie status */
+
+.status{
+font-size:14px;
+font-weight:500;
+margin-top:6px;
+margin-bottom:10px;
+}
+
+.available{
+color:#2b5fb8;
+}
+
+.booked{
+color:#666;
+}
+
+.unknown{
+color:#9ca3af;
+}
 
 /* LOAD MORE */
 
 .load-more{
 text-align:center;
 margin-top:50px;
+}
+
+/* META CARD STYLING */
+
+.meta{
+color:#555;
+font-size:14px;
+margin-bottom:6px;
+}
+
+.skills{
+color:#444;
+margin-bottom:6px;
+}
+
+.location{
+font-size:14px;
+color:#777;
+margin-bottom:10px;
 }
