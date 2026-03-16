@@ -115,11 +115,12 @@ border-radius:6px;
 text-decoration:none;
 font-weight:600;
 transition:0.2s;
+display:inline-block;
 }
 
 .btn-primary:hover{
 background:#1f4fa3;
-transform:translateY(-1px);
+transform:translateY(-2px);
 }
 
 .btn-secondary{
