@@ -54,33 +54,36 @@ Verified English-speaking caregivers with professional experience.
 
 <div class="list-header">
 
-<div>
-<h1>Verified professionals in Almaty</h1>
-<p>Limited curated listings to maintain quality.</p>
-</div>
+  <div>
+    <h1>Verified professionals in Almaty</h1>
+    <p>Limited curated listings to maintain quality.</p>
+  </div>
 
-<div class="sort-box">
+  <div class="sort-box">
+    <div class="sort-dropdown">
+      <button class="sort-btn">
+        Sort <span class="arrow">⌄</span>
+      </button>
 
-  <div class="sort-dropdown">
-    <button class="sort-btn">
-      Sort <span class="arrow">⌄</span>
-    </button>
-
-    <div class="sort-menu">
-      <div class="sort-item">Experience</div>
-      <div class="sort-item">Availability</div>
-      <div class="sort-item">Newest</div>
+      <div class="sort-menu">
+        <div class="sort-item" data-sort="experience">Experience</div>
+        <div class="sort-item" data-sort="availability">Availability</div>
+        <div class="sort-item" data-sort="new">Newest</div>
+      </div>
     </div>
   </div>
 
 </div>
 
-</div>
+
 
 
 <div class="nannies-grid">
 
-<div class="nanny-card">
+<div class="nanny-card"
+     data-experience="5"
+     data-available="true"
+     data-new="3">
 
 <div class="card-top">
 
@@ -103,12 +106,14 @@ Verified English-speaking caregivers with professional experience.
 <div class="card-footer">
 <a href="profile.html">View Profile →</a>
 </div>
-
 </div>
 
 
 
-<div class="nanny-card">
+<div class="nanny-card"
+     data-experience="5"
+     data-available="true"
+     data-new="3">
 
 <div class="card-top">
 
@@ -131,11 +136,13 @@ Verified English-speaking caregivers with professional experience.
 <div class="card-footer">
 <a href="profile.html">View Profile →</a>
 </div>
-
 </div>
 
 
-<div class="nanny-card">
+<div class="nanny-card"
+     data-experience="5"
+     data-available="true"
+     data-new="3">
 
 <div class="card-top">
 
@@ -160,8 +167,6 @@ Verified English-speaking caregivers with professional experience.
 </div>
 
 </div>
-
-
 </div>
 
 
@@ -207,20 +212,65 @@ window.addEventListener("scroll", function() {
 });
 </script>
 
+
 <script>
 const btn = document.querySelector(".sort-btn");
 const dropdown = document.querySelector(".sort-dropdown");
 const menu = document.querySelector(".sort-menu");
+const sortItems = document.querySelectorAll(".sort-item");
+const cardsContainer = document.querySelector(".nannies-grid");
 
+// Open dropdown
 btn.addEventListener("click", (e) => {
   e.stopPropagation();
   menu.classList.toggle("active");
 });
 
+// Close dropdown
 document.addEventListener("click", (e) => {
   if (!dropdown.contains(e.target)) {
     menu.classList.remove("active");
   }
+});
+
+// Sorting
+sortItems.forEach(item => {
+  item.addEventListener("click", () => {
+
+    const type = item.dataset.sort;
+    const cards = Array.from(document.querySelectorAll(".nanny-card"));
+
+    let sorted;
+
+    if(type === "experience"){
+      sorted = cards.sort((a, b) => 
+        b.dataset.experience - a.dataset.experience
+      );
+    }
+
+    if(type === "availability"){
+      sorted = cards.sort((a, b) => 
+        b.dataset.available.localeCompare(a.dataset.available)
+      );
+    }
+
+    if(type === "new"){
+      sorted = cards.sort((a, b) => 
+        b.dataset.new - a.dataset.new
+      );
+    }
+
+    // Re-render
+    cardsContainer.innerHTML = "";
+    sorted.forEach(card => cardsContainer.appendChild(card));
+
+    // Update button text
+    btn.innerHTML = item.innerText + ' <span class="arrow">⌄</span>';
+
+    // Close dropdown
+    menu.classList.remove("active");
+
+  });
 });
 </script>
 
