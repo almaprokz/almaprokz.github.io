@@ -796,3 +796,96 @@ flex-direction:column;
 }
 
 }
+
+/* APPLY PAGE */
+.apply-hero{
+text-align:center;
+padding:60px 0 30px;
+}
+
+.subtitle{
+color:#666;
+margin:10px 0 20px;
+}
+
+.badge{
+display:inline-block;
+background:#eef2ff;
+color:#2b5fb8;
+padding:8px 16px;
+border-radius:20px;
+font-size:14px;
+}
+
+/* FORM */
+.apply-form{
+background:#f7f7f7;
+padding:40px 0 80px;
+}
+
+.form-wrapper{
+max-width:700px;
+margin:auto;
+}
+
+.form-block{
+background:white;
+padding:25px;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+.form-block h3{
+margin-bottom:15px;
+}
+
+.form-row{
+display:flex;
+gap:15px;
+margin-bottom:15px;
+}
+
+input, textarea{
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:14px;
+}
+
+textarea{
+min-height:120px;
+resize:none;
+}
+
+.tags{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:10px;
+}
+
+.tags span{
+padding:8px 14px;
+border:1px solid #ccc;
+border-radius:8px;
+cursor:pointer;
+}
+
+.upload-box{
+border:2px dashed #ccc;
+padding:40px;
+text-align:center;
+border-radius:10px;
+color:#666;
+}
+
+.form-note{
+text-align:center;
+color:#777;
+margin:20px 0;
+}
+
+.center{
+text-align:center;
+}
