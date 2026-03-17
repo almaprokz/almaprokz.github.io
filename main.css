@@ -882,8 +882,7 @@ cursor:pointer;
 }
 
 .tags-row{
-display:grid;
-grid-template-columns:repeat(2, 1fr);
+display:flex;
 gap:12px;
 margin-top:10px;
 }
@@ -907,15 +906,15 @@ text-align:center;
 }
 
 .tag{
-font-weight:500;
+flex:1; /* THIS is the magic */
 padding:14px;
 border:1px solid #ddd;
 border-radius:8px;
 text-align:center;
 cursor:pointer;
 transition:all .2s ease;
-font-size:14px;
 background:white;
+font-size:14px;
 }
 
 /* Hover */
@@ -951,4 +950,14 @@ transition:all .2s ease;
 .btn-primary:hover{
 transform:translateY(-2px);
 box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width:768px){
+  .tags-row{
+    flex-wrap:wrap;
+  }
+
+  .tag{
+    flex:1 1 calc(50% - 12px);
+  }
 }
