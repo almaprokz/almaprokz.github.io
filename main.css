@@ -472,16 +472,59 @@ align-items:flex-start;
 margin-bottom:40px;
 }
 
-.sort-box{
-text-align:right;
+.sort-dropdown{
+position:relative;
+display:inline-block;
 }
 
 .sort-btn{
 border:1px solid #ccc;
 background:white;
-padding:6px 12px;
-border-radius:4px;
-margin-bottom:5px;
+padding:10px 16px;
+border-radius:8px;
+cursor:pointer;
+font-size:14px;
+display:flex;
+align-items:center;
+gap:8px;
+transition:all .2s ease;
+}
+
+.sort-btn:hover{
+border-color:#999;
+}
+
+.arrow{
+font-size:12px;
+}
+
+/* Dropdown menu */
+.sort-menu{
+position:absolute;
+top:110%;
+left:0;
+background:white;
+border:1px solid #ddd;
+border-radius:8px;
+box-shadow:0 10px 20px rgba(0,0,0,0.08);
+padding:8px 0;
+display:none;
+min-width:160px;
+}
+
+.sort-item{
+padding:10px 15px;
+cursor:pointer;
+font-size:14px;
+}
+
+.sort-item:hover{
+background:#f3f4f6;
+}
+
+/* SHOW on hover */
+.sort-dropdown:hover .sort-menu{
+display:block;
 }
 
 

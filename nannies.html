@@ -60,8 +60,19 @@ Verified English-speaking caregivers with professional experience.
 </div>
 
 <div class="sort-box">
-<button class="sort-btn">Sort</button>
-<span>Experience</span>
+
+  <div class="sort-dropdown">
+    <button class="sort-btn">
+      Sort <span class="arrow">⌄</span>
+    </button>
+
+    <div class="sort-menu">
+      <div class="sort-item">Experience</div>
+      <div class="sort-item">Availability</div>
+      <div class="sort-item">Newest</div>
+    </div>
+  </div>
+
 </div>
 
 </div>
@@ -192,6 +203,21 @@ window.addEventListener("scroll", function() {
     header.classList.add("shrink");
   } else {
     header.classList.remove("shrink");
+  }
+});
+</script>
+
+<script>
+const btn = document.querySelector(".sort-btn");
+const menu = document.querySelector(".sort-menu");
+
+btn.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
+
+document.addEventListener("click", (e) => {
+  if (!btn.contains(e.target) && !menu.contains(e.target)) {
+    menu.classList.remove("active");
   }
 });
 </script>
