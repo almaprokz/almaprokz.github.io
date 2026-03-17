@@ -81,7 +81,7 @@ Verified English-speaking caregivers with professional experience.
 <div class="nannies-grid">
 
 <div class="nanny-card"
-     data-experience="5"
+     data-experience="7"
      data-available="true"
      data-new="3">
 
@@ -111,9 +111,9 @@ Verified English-speaking caregivers with professional experience.
 
 
 <div class="nanny-card"
-     data-experience="5"
-     data-available="true"
-     data-new="3">
+     data-experience="3"
+     data-available="false"
+     data-new="1">
 
 <div class="card-top">
 
@@ -142,7 +142,7 @@ Verified English-speaking caregivers with professional experience.
 <div class="nanny-card"
      data-experience="5"
      data-available="true"
-     data-new="3">
+     data-new="2">
 
 <div class="card-top">
 
@@ -250,8 +250,8 @@ sortItems.forEach(item => {
 
     if(type === "availability"){
       sorted = cards.sort((a, b) => 
-        b.dataset.available.localeCompare(a.dataset.available)
-      );
+  (b.dataset.available === "true") - (a.dataset.available === "true")
+);
     }
 
     if(type === "new"){
