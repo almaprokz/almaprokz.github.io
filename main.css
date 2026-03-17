@@ -12,14 +12,17 @@ padding:20px;
 }
 
 .header{
-background:#f7f7f7;
-border-bottom:1px solid #e5e7eb;
-padding:18px 0;
-
 position:sticky;
 top:0;
 z-index:1000;
-box-shadow:0 2px 8px rgba(0,0,0,0.04);
+background:#f7f7f7; /* your current header color */
+transition:all 0.3s ease;
+padding:20px 0;
+}
+
+.header.shrink{
+padding:10px 0;
+box-shadow:0 4px 12px rgba(0,0,0,0.05);
 }
 
 .header-inner{
@@ -29,10 +32,14 @@ align-items:center;
 }
 
 .logo img{
-height:30px;
+height:34px;
 width:auto;
 display:block;
-transition:opacity .2s ease;
+transition:all 0.3s ease;
+}
+
+.logo img{
+height:28px;
 }
 
 .logo:hover img{
