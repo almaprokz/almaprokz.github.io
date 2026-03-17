@@ -45,7 +45,9 @@
         <input type="text" placeholder="Nationality">
       </div>
 
-      <input type="text" placeholder="Current Location (Almaty)">
+      <div class="form-row">
+  <input type="text" placeholder="Current Location (Almaty)">
+</div>
 
       <div class="form-row">
         <input type="text" placeholder="WhatsApp Number">
@@ -64,27 +66,33 @@
 
       <p class="label">Preferred Schedule</p>
 
-      <div class="tags">
-        <span>Full-time</span>
-        <span>Part-time</span>
-        <span>Live-in</span>
-        <span>Live-out</span>
-      </div>
+<div class="tags">
+  <span class="tag">Full-time</span>
+  <span class="tag">Part-time</span>
+  <span class="tag">Live-in</span>
+  <span class="tag">Live-out</span>
+</div>
     </div>
 
     <!-- SALARY -->
     <div class="form-block">
       <h3>Salary Expectation</h3>
 
-      <input type="text" placeholder="350 000 – 500 000 KZT / month">
+      <div class="form-row">
+  <input type="text" placeholder="350 000 – 500 000 KZT / month">
+</div>
     </div>
 
     <!-- ABOUT -->
     <div class="form-block">
       <h3>About you</h3>
 
-      <textarea placeholder="Tell us about your experience working with families."></textarea>
-    </div>
+      <div class="form-row">
+  <textarea id="about" maxlength="300"
+  placeholder="Tell us about your experience working with families."></textarea>
+</div>
+
+<p class="char-count">0 / 300</p>
 
     <!-- PHOTO -->
     <div class="form-block">
@@ -124,6 +132,59 @@
     <p>© 2026 AlmaPro. All rights reserved.</p>
   </div>
 </footer>
+
+<script>
+const tags = document.querySelectorAll(".tag");
+
+tags.forEach(tag => {
+  tag.addEventListener("click", () => {
+    tag.classList.toggle("active");
+  });
+});
+</script>
+
+<script>
+const textarea = document.getElementById("about");
+const counter = document.querySelector(".char-count");
+
+textarea.addEventListener("input", () => {
+  counter.textContent = textarea.value.length + " / 300";
+});
+</script>
+
+<script>
+const submitBtn = document.querySelector(".btn-primary");
+
+submitBtn.addEventListener("click", () => {
+
+  const inputs = document.querySelectorAll("input");
+  let valid = true;
+
+  inputs.forEach(input => {
+    if(input.value.trim() === ""){
+      input.style.borderColor = "red";
+      valid = false;
+    } else {
+      input.style.borderColor = "#ddd";
+    }
+  });
+
+  if(!valid){
+    alert("Please fill all required fields");
+  } else {
+    alert("Application submitted (demo)");
+  }
+
+});
+</script>
+
+<script>
+// Get selected schedules
+const selected = Array.from(document.querySelectorAll(".tag.active"))
+.map(tag => tag.innerText);
+
+console.log(selected);
+</script>
 
 </body>
 </html>

@@ -829,10 +829,9 @@ margin:auto;
 }
 
 .form-block{
-background:white;
-padding:25px;
-border-radius:10px;
-margin-bottom:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
 }
 
 .form-block h3{
@@ -845,6 +844,11 @@ gap:15px;
 margin-bottom:15px;
 }
 
+.form-block input{
+margin-bottom:15px;
+flex:1;
+}
+
 input, textarea{
 width:100%;
 padding:12px;
@@ -854,7 +858,12 @@ font-size:14px;
 }
 
 textarea{
-min-height:120px;
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:14px;
+min-height:140px;
 resize:none;
 }
 
@@ -888,4 +897,45 @@ margin:20px 0;
 
 .center{
 text-align:center;
+}
+
+.tag{
+padding:8px 14px;
+border:1px solid #ccc;
+border-radius:8px;
+cursor:pointer;
+transition:all .2s ease;
+}
+
+.tag:hover{
+border-color:#2b5fb8;
+color:#2b5fb8;
+}
+
+.tag.active{
+background:#2b5fb8;
+color:white;
+border-color:#2b5fb8;
+}
+
+.char-count{
+text-align:right;
+font-size:12px;
+color:#888;
+margin-top:5px;
+}
+
+input:focus, textarea:focus{
+outline:none;
+border-color:#2b5fb8;
+box-shadow:0 0 0 2px rgba(43,95,184,0.1);
+}
+
+.btn-primary{
+transition:all .2s ease;
+}
+
+.btn-primary:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
