@@ -480,10 +480,10 @@ display:inline-block;
 .sort-btn{
 border:1px solid #ccc;
 background:white;
-padding:10px 16px;
-border-radius:8px;
+padding:12px 18px;
+border-radius:10px;
 cursor:pointer;
-font-size:14px;
+font-size:15px;
 display:flex;
 align-items:center;
 gap:8px;
@@ -505,11 +505,16 @@ top:110%;
 left:0;
 background:white;
 border:1px solid #ddd;
-border-radius:8px;
+border-radius:10px;
 box-shadow:0 10px 20px rgba(0,0,0,0.08);
-padding:8px 0;
+padding:10px 0;
 display:none;
-min-width:160px;
+min-width:180px;
+z-index:100;
+}
+
+.sort-menu.active{
+display:block;
 }
 
 .sort-item{
@@ -521,12 +526,6 @@ font-size:14px;
 .sort-item:hover{
 background:#f3f4f6;
 }
-
-/* SHOW on hover */
-.sort-dropdown:hover .sort-menu{
-display:block;
-}
-
 
 /* GRID */
 

@@ -209,14 +209,16 @@ window.addEventListener("scroll", function() {
 
 <script>
 const btn = document.querySelector(".sort-btn");
+const dropdown = document.querySelector(".sort-dropdown");
 const menu = document.querySelector(".sort-menu");
 
-btn.addEventListener("click", () => {
+btn.addEventListener("click", (e) => {
+  e.stopPropagation();
   menu.classList.toggle("active");
 });
 
 document.addEventListener("click", (e) => {
-  if (!btn.contains(e.target) && !menu.contains(e.target)) {
+  if (!dropdown.contains(e.target)) {
     menu.classList.remove("active");
   }
 });
