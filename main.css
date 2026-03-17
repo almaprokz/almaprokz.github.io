@@ -640,3 +640,117 @@ text-align:left;
 }
 
 }
+
+/* PROFILE HERO */
+.profile-hero{
+background:#ffffff;
+padding:60px 0;
+}
+
+.profile-top{
+display:flex;
+gap:40px;
+align-items:center;
+}
+
+.profile-photo img{
+width:220px;
+border-radius:10px;
+}
+
+.profile-info h1{
+margin-bottom:5px;
+}
+
+.role{
+color:#666;
+margin-bottom:15px;
+}
+
+.meta p{
+margin-bottom:6px;
+}
+
+.available{
+color:#2b5fb8;
+font-weight:500;
+}
+
+.note{
+font-size:14px;
+color:#777;
+margin-top:10px;
+}
+
+/* SECTIONS */
+.profile-section{
+padding:60px 0;
+background:#ffffff;
+}
+
+.profile-section h2{
+margin-bottom:20px;
+}
+
+.about-text{
+max-width:700px;
+color:#555;
+}
+
+/* GRID INFO */
+.info-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+margin-top:20px;
+}
+
+.label{
+font-size:14px;
+color:#777;
+margin-bottom:5px;
+}
+
+/* REVIEWS */
+.profile-reviews{
+background:#f7f7f7;
+padding:60px 0;
+}
+
+.reviews-grid{
+display:flex;
+gap:40px;
+margin-top:20px;
+}
+
+.review{
+max-width:300px;
+color:#555;
+}
+
+.review-btn{
+margin-top:30px;
+}
+
+/* BACK BUTTON */
+.back-btn{
+text-align:center;
+margin-top:40px;
+}
+
+@media (max-width:768px){
+
+.profile-top{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.info-grid{
+grid-template-columns:1fr;
+}
+
+.reviews-grid{
+flex-direction:column;
+}
+
+}
