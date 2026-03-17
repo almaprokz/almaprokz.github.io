@@ -798,6 +798,35 @@ flex-direction:column;
 }
 
 /* APPLY PAGE */
+.header{
+position:sticky;
+top:0;
+background:#f7f7f7;
+z-index:100;
+transition:all 0.3s ease;
+}
+
+.header.shrink{
+height:60px;
+box-shadow:0 4px 12px rgba(0,0,0,0.06);
+}
+
+.header-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:80px;
+transition:all 0.3s ease;
+}
+
+.header.shrink .header-inner{
+height:60px;
+}
+
+.header.shrink .header-inner{
+height:60px;
+}
+
 body{
 background:#f7f7f7;
 }
