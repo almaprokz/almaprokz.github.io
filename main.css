@@ -881,6 +881,13 @@ border-radius:8px;
 cursor:pointer;
 }
 
+.tags-row{
+display:grid;
+grid-template-columns:repeat(2, 1fr);
+gap:12px;
+margin-top:10px;
+}
+
 .upload-box{
 border:2px dashed #ccc;
 padding:40px;
@@ -900,18 +907,24 @@ text-align:center;
 }
 
 .tag{
-padding:8px 14px;
-border:1px solid #ccc;
+font-weight:500;
+padding:14px;
+border:1px solid #ddd;
 border-radius:8px;
+text-align:center;
 cursor:pointer;
 transition:all .2s ease;
+font-size:14px;
+background:white;
 }
 
+/* Hover */
 .tag:hover{
 border-color:#2b5fb8;
 color:#2b5fb8;
 }
 
+/* Active */
 .tag.active{
 background:#2b5fb8;
 color:white;
