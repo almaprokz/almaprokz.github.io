@@ -968,3 +968,43 @@ box-shadow:0 8px 20px rgba(0,0,0,0.1);
     flex:1 1 calc(50% - 12px);
   }
 }
+
+/* SUCCESS STATE */
+.success-message{
+display:none;
+text-align:center;
+padding:80px 20px;
+}
+
+.success-box{
+background:white;
+padding:40px;
+border-radius:12px;
+max-width:500px;
+margin:auto;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.success-icon{
+font-size:32px;
+color:#2b5fb8;
+margin-bottom:20px;
+}
+
+.success-message{
+display:none;
+text-align:center;
+padding:80px 20px;
+animation:fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}

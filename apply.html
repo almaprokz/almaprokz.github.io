@@ -53,7 +53,6 @@
 
   </div>
 </div>
-</section>
 
     <!-- BASIC -->
     <div class="form-block">
@@ -174,6 +173,8 @@ textarea.addEventListener("input", () => {
 
 <script>
 const submitBtn = document.querySelector(".btn-primary");
+const formWrapper = document.querySelector(".form-wrapper");
+const successMessage = document.getElementById("successMessage");
 
 submitBtn.addEventListener("click", () => {
 
@@ -191,9 +192,14 @@ submitBtn.addEventListener("click", () => {
 
   if(!valid){
     alert("Please fill all required fields");
-  } else {
-    alert("Application submitted (demo)");
+    return;
   }
+
+  // 👇 HIDE FORM
+  formWrapper.style.display = "none";
+
+  // 👇 SHOW SUCCESS
+  successMessage.style.display = "block";
 
 });
 </script>
