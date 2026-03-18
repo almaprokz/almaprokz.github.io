@@ -35,7 +35,7 @@ transition:all 0.3s ease;
 
 /* SHRINK STATE */
 .header.shrink .header-inner{
-height:50px;
+height:45px;
 }
 
 .header.shrink .logo img{
