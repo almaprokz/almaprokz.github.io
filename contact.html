@@ -1,0 +1,141 @@
+<section class="contact-hero">
+  <div class="container">
+
+    <h1>Contact AlmaPro</h1>
+
+    <p class="contact-sub">
+      If you have questions about finding a professional or applying to the platform, feel free to reach out.
+    </p>
+
+    <p class="contact-note">
+      We usually respond within 24 hours.
+    </p>
+
+    <ul class="contact-list">
+      <li>✔ Real people support</li>
+      <li>✔ Direct contact with professionals</li>
+      <li>✔ Carefully reviewed profiles</li>
+    </ul>
+
+  </div>
+</section>
+
+<section class="contact-options">
+  <div class="container contact-grid">
+
+    <div class="contact-card">
+      <h3>WhatsApp Support</h3>
+      <p>Quick questions about professionals or using the platform.</p>
+
+      <div class="card-divider"></div>
+
+      <a href="#" class="contact-link">Contact via WhatsApp →</a>
+    </div>
+
+    <div class="contact-card">
+      <h3>Email Support</h3>
+      <p>General inquiries and support.</p>
+
+      <div class="card-divider"></div>
+
+      <a href="mailto:support@almapro.kz" class="contact-link">
+        support@almapro.kz →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact-form">
+  <div class="container form-wrapper">
+
+    <h2>Send a Message</h2>
+
+    <div class="form-block">
+      <input type="text" placeholder="Name">
+    </div>
+
+    <div class="form-block">
+      <input type="email" placeholder="Email">
+    </div>
+
+    <div class="form-block">
+      <textarea placeholder="Message"></textarea>
+    </div>
+
+    <p class="form-note">
+      We review all messages personally and usually respond within 24 hours.
+    </p>
+
+    <button class="btn-primary">Send message</button>
+
+  </div>
+
+  <!-- SUCCESS MESSAGE -->
+  <div class="success-message" id="contactSuccess">
+    <div class="success-box">
+      <div class="success-icon">✔</div>
+      <h2>Message Sent</h2>
+      <p>We’ll get back to you shortly.</p>
+      <a href="index.html" class="btn-primary">Back to Home</a>
+    </div>
+  </div>
+
+</section>
+
+<!--footer-->
+<footer class="footer">
+  <div class="container footer-inner">
+
+    <div class="footer-left">
+      <img src="images/almapro-logo-white.svg" alt="AlmaPro" class="footer-logo">
+      <p>Curated professionals<br>in Almaty.</p>
+    </div>
+
+    <div class="footer-right">
+      <p class="footer-title">Explore by Categories</p>
+      <a href="#">Our Standard</a>
+      <a href="#">For Professionals</a>
+      <a href="#">Contact</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom container">
+    <div class="footer-line"></div>
+    <p>© 2026 AlmaPro. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+const contactBtn = document.querySelector(".contact-form .btn-primary");
+const contactForm = document.querySelector(".contact-form .form-wrapper");
+const contactSuccess = document.getElementById("contactSuccess");
+
+contactBtn.addEventListener("click", () => {
+
+  const inputs = contactForm.querySelectorAll("input, textarea");
+  let valid = true;
+
+  inputs.forEach(input => {
+    if(input.value.trim() === ""){
+      input.style.borderColor = "red";
+      valid = false;
+    } else {
+      input.style.borderColor = "#ddd";
+    }
+  });
+
+  if(!valid){
+    alert("Please fill all fields");
+    return;
+  }
+
+  contactForm.style.display = "none";
+  contactSuccess.style.display = "block";
+
+});
+</script>
+
+</body>
+</html>

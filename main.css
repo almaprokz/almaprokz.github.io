@@ -1008,3 +1008,70 @@ opacity:1;
 transform:translateY(0);
 }
 }
+
+/* HERO contact */
+.contact-hero{
+background:#f7f7f7;
+padding:60px 0 30px;
+}
+
+.contact-sub{
+margin-top:10px;
+max-width:500px;
+color:#555;
+}
+
+.contact-note{
+margin-top:15px;
+color:#666;
+}
+
+.contact-list{
+margin-top:25px;
+line-height:2;
+color:#444;
+}
+
+/* CARDS */
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-top:20px;
+}
+
+.contact-card{
+background:white;
+padding:20px;
+border-radius:10px;
+border:1px solid #e5e7eb;
+transition:.25s ease;
+}
+
+.contact-card:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card-divider{
+margin:15px 0;
+border-top:1px solid #e5e7eb;
+}
+
+.contact-link{
+color:#2b5fb8;
+text-decoration:none;
+font-weight:500;
+}
+
+/* FORM */
+.contact-form{
+background:#f7f7f7;
+padding:60px 0 80px;
+}
+
+.form-note{
+margin-top:10px;
+color:#666;
+font-size:14px;
+}
