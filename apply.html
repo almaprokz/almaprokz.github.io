@@ -51,84 +51,42 @@
 
     <a href="index.html" class="btn-primary">Back to Home</a>
 
-  </div>
-</div>
-
     <!-- BASIC -->
-    <div class="form-block">
-      <h3>Basic Information</h3>
+    <form action="https://formspree.io/f/mgonqoye" method="POST">
+      
+      <input type="hidden" name="_next" value="https://almapro.kz/success.html">
 
-      <div class="form-row">
-        <input type="text" placeholder="Full Name">
-        <input type="text" placeholder="Nationality">
-      </div>
+  <!-- Basic Info -->
+  <input type="text" name="full_name" placeholder="Full Name" required>
+  <input type="text" name="nationality" placeholder="Nationality">
 
-      <div class="form-row">
-  <input type="text" placeholder="Current Location (Almaty)">
+  <input type="text" name="location" placeholder="Current Location (Almaty)" required>
+
+  <input type="text" name="whatsapp" placeholder="WhatsApp Number" required>
+  <input type="email" name="email" placeholder="Email">
+
+  <!-- Professional -->
+  <input type="text" name="experience" placeholder="Years of experience">
+
+  <input type="text" name="languages" placeholder="Languages">
+
+  <!-- Schedule -->
+  <input type="text" name="schedule" placeholder="Preferred Schedule">
+
+  <!-- Salary -->
+  <input type="text" name="salary" placeholder="Salary Expectation">
+
+  <!-- About -->
+  <textarea name="about" placeholder="Tell us about your experience"></textarea>
+
+  <input type="hidden" name="_subject" value="New Application - AlmaPro">
+
+  <button type="submit" class="btn-primary">Submit for Review</button>
+
+</form>
 </div>
 
-      <div class="form-row">
-        <input type="text" placeholder="WhatsApp Number">
-        <input type="email" placeholder="Email (Optional)">
-      </div>
-    </div>
-
-    <!-- PROFESSIONAL -->
-    <div class="form-block">
-      <h3>Professional Information</h3>
-
-      <div class="form-row">
-        <input type="text" placeholder="Years of experience">
-        <input type="text" placeholder="Languages spoken">
-      </div>
-
-      <p class="label">Preferred Schedule</p>
-
-<div class="form-row tags-row">
-  <span class="tag">Full-time</span>
-  <span class="tag">Part-time</span>
-  <span class="tag">Live-in</span>
-  <span class="tag">Live-out</span>
 </div>
-
-    </div>
-
-    <!-- SALARY -->
-    <div class="form-block">
-      <h3>Salary Expectation</h3>
-
-      <div class="form-row">
-  <input type="text" placeholder="350 000 – 500 000 KZT / month">
-</div>
-    </div>
-
-    <!-- ABOUT -->
-    <div class="form-block">
-      <h3>About you</h3>
-
-      <div class="form-row">
-  <textarea id="about" maxlength="300"
-  placeholder="Tell us about your experience working with families."></textarea>
-</div>
-
-<p class="char-count">0 / 300</p>
-
-    <!-- PHOTO -->
-    <div class="form-block">
-      <h3>Profile photo</h3>
-
-      <div class="upload-box">
-        Upload photo
-      </div>
-    </div>
-
-    <p class="form-note">Applications are reviewed individually.</p>
-
-    <div class="center">
-      <button class="btn-primary">Submit for Review</button>
-    </div>
-
-  </div>
 </section>
 
 <footer class="footer">
