@@ -79,24 +79,29 @@
 
     <h2>Send a Message</h2>
 
-    <div class="form-block">
-      <input type="text" placeholder="Name">
-    </div>
+   <form action="https://formspree.io/f/mpqynwgp" method="POST">
 
-    <div class="form-block">
-      <input type="email" placeholder="Email">
-    </div>
+  <div class="form-block">
+    <input type="text" name="name" placeholder="Name" required>
+  </div>
 
-    <div class="form-block">
-      <textarea placeholder="Message"></textarea>
-    </div>
+  <div class="form-block">
+    <input type="email" name="email" placeholder="Email" required>
+  </div>
 
-    <p class="form-note">
-      We review all messages personally and usually respond within 24 hours.
-    </p>
+  <div class="form-block">
+    <textarea name="message" placeholder="Message" required></textarea>
+  </div>
 
-    <button class="btn-primary">Send message</button>
+  <input type="hidden" name="_subject" value="New Contact Message - AlmaPro">
 
+  <p class="form-note">
+    We review all messages personally and usually respond within 24 hours.
+  </p>
+
+  <button type="submit" class="btn-primary">Send message</button>
+
+</form>
   </div>
 
   <!-- SUCCESS MESSAGE -->
@@ -135,35 +140,6 @@
   </div>
 </footer>
 
-<script>
-const contactBtn = document.querySelector(".contact-form .btn-primary");
-const contactForm = document.querySelector(".contact-form .form-wrapper");
-const contactSuccess = document.getElementById("contactSuccess");
-
-contactBtn.addEventListener("click", () => {
-
-  const inputs = contactForm.querySelectorAll("input, textarea");
-  let valid = true;
-
-  inputs.forEach(input => {
-    if(input.value.trim() === ""){
-      input.style.borderColor = "red";
-      valid = false;
-    } else {
-      input.style.borderColor = "#ddd";
-    }
-  });
-
-  if(!valid){
-    alert("Please fill all fields");
-    return;
-  }
-
-  contactForm.style.display = "none";
-  contactSuccess.style.display = "block";
-
-});
-</script>
 
 <script>
 window.addEventListener("scroll", function() {
