@@ -900,7 +900,7 @@ max-width:200px;
 }
 
 input, textarea{
-width:100%;
+width:95%;
 padding:12px;
 border:1px solid #ddd;
 border-radius:8px;
@@ -909,7 +909,7 @@ background: #fff;
 }
 
 textarea{
-width:100%;
+width:95%;
 padding:12px;
 border:1px solid #ddd;
 border-radius:8px;
