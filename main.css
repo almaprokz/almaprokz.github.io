@@ -954,7 +954,7 @@ margin-top:10px;
   cursor: pointer;
   transition: 0.2s;
   display: block;
-  width: 100%;
+  width: 80%;
 }
 
 .upload-box:hover {
