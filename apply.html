@@ -37,35 +37,67 @@
 </section>
 
 <!-- FORM -->
-<section class="apply-form">
-  <div class="container form-wrapper">
+<form action="https://formspree.io/f/mgonqoye" method="POST">
 
-    <!-- ✅ FORM (VISIBLE BY DEFAULT) -->
-    <form action="https://formspree.io/f/mgonqoye" method="POST">
+<!-- BASIC -->
+<div class="form-card">
+  <h3>Basic Information</h3>
 
-      <input type="hidden" name="_next" value="https://almapro.kz/success.html">
-      <input type="hidden" name="_subject" value="New Application - AlmaPro">
+  <div class="grid-2">
+    <input type="text" name="full_name" placeholder="Full Name" required>
+    <input type="text" name="nationality" placeholder="Nationality">
+  </div>
 
-      <input type="text" name="full_name" placeholder="Full Name" required>
-      <input type="text" name="nationality" placeholder="Nationality">
+  <input type="text" name="location" placeholder="Current Location (Almaty)" required>
 
-      <input type="text" name="location" placeholder="Current Location (Almaty)" required>
+  <div class="grid-2">
+    <input type="text" name="whatsapp" placeholder="WhatsApp Number" required>
+    <input type="email" name="email" placeholder="Email (Optional)">
+  </div>
+</div>
 
-      <input type="text" name="whatsapp" placeholder="WhatsApp Number" required>
-      <input type="email" name="email" placeholder="Email">
+<!-- PROFESSIONAL -->
+<div class="form-card">
+  <h3>Professional information</h3>
 
-      <input type="text" name="experience" placeholder="Years of experience">
-      <input type="text" name="languages" placeholder="Languages">
-      <input type="text" name="schedule" placeholder="Preferred Schedule">
-      <input type="text" name="salary" placeholder="Salary Expectation">
+  <div class="grid-2">
+    <input type="text" name="experience" placeholder="Years of experience">
+    <input type="text" name="languages" placeholder="Languages Spoken">
+  </div>
 
-      <textarea name="about" placeholder="Tell us about your experience"></textarea>
+  <p class="label">Preferred Schedule</p>
 
-      <input type="hidden" name="_subject" value="New Application - AlmaPro">
+  <div class="tags">
+    <div class="tag">Full-time</div>
+    <div class="tag">Part-time</div>
+    <div class="tag">Live-in</div>
+    <div class="tag">Live-out</div>
+  </div>
+</div>
 
-      <button type="submit" class="btn-primary">Submit for Review</button>
+<!-- SALARY -->
+<div class="form-card">
+  <h3>Salary Expectation</h3>
 
-    </form>
+  <div class="salary-row">
+    <span>Expected salary (KZT / month)</span>
+    <input type="text" name="salary" placeholder="350 000–500 000">
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="form-card">
+  <h3>About you</h3>
+
+  <textarea id="about" name="about" maxlength="300"
+    placeholder="Tell us about your experience working with families"></textarea>
+
+  <div class="char-count">0 / 300</div>
+</div>
+
+<button type="submit" class="btn-primary">Submit for Review</button>
+
+</form>
 
     <!-- ✅ SUCCESS MESSAGE (SEPARATE) -->
     <div class="success-message" id="successMessage" style="display:none;">
