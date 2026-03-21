@@ -800,6 +800,7 @@ flex-direction:column;
 /* APPLY PAGE */
 body{
 background:#f7f7f7;
+max-width: 900px;
 }
 
 .apply-hero{
@@ -828,9 +829,10 @@ background:#f7f7f7;
 padding:40px 0 80px;
 }
 
-.form-wrapper{
-max-width:700px;
-margin:auto;
+.form-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* important for spacing */
 }
 
 .form-block{
