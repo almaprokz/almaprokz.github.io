@@ -24,24 +24,11 @@
 </header>
 
 
-<!-- HERO -->
-<section class="apply-hero">
-  <div class="container center">
-
-    <h1>Apply to AlmaPro</h1>
-    <p class="subtitle">Join our network of trusted professionals in Almaty</p>
-
-    <div class="badge">✔ Profiles reviewed before listing</div>
-
-  </div>
-</section>
-
-<!--Form-->
-
+<!-- APPLY FORM -->
 <section class="apply-form">
-  <div class="form-wrapper"> <!-- 1200px -->
+  <div class="form-wrapper">
 
-    <div class="form-inner"> <!-- 900px centered -->
+    <div class="form-inner">
 
       <form action="https://formspree.io/f/mgonqoye" method="POST">
 
@@ -50,30 +37,29 @@
           <h3>Basic Information</h3>
 
           <div class="form-row">
-            <input type="text" placeholder="Full Name">
-            <input type="text" placeholder="Nationality">
+            <input type="text" name="full_name" placeholder="Full Name" required>
+            <input type="text" name="nationality" placeholder="Nationality">
           </div>
 
-          <input type="text" placeholder="Current Location (Almaty)">
+          <input type="text" name="location" placeholder="Current Location (Almaty)" required>
 
           <div class="form-row">
-  <div class="phone-input">
-    <select>
-      <option>+7</option>
-      <option>+77</option>
-    </select>
-    <input type="text" placeholder="WhatsApp Number">
-  </div>
+            <div class="phone-input">
+              <select name="country_code">
+                <option value="+7">+7</option>
+              </select>
+              <input type="text" name="whatsapp" placeholder="WhatsApp Number" required>
+            </div>
 
-  <input type="email" placeholder="Email (Optional)">
-</div>
+            <input type="email" name="email" placeholder="Email (Optional)">
+          </div>
         </div>
 
         <!-- PROFESSIONAL -->
-        <div class="form-block"> <!-- 🔥 CHANGE form-card → form-block -->
+        <div class="form-block">
           <h3>Professional information</h3>
 
-          <div class="form-row"> <!-- 🔥 CHANGE grid-2 → form-row -->
+          <div class="form-row">
             <input type="text" name="experience" placeholder="Years of experience">
             <input type="text" name="languages" placeholder="Languages Spoken">
           </div>
@@ -110,19 +96,23 @@
 
         <!-- PROFILE PHOTO -->
         <div class="form-block">
-  <h3>Profile photo</h3>
+          <h3>Profile photo</h3>
 
-  <label class="upload-box">
-    <input type="file" name="photo" accept="image/*" hidden>
+          <label class="upload-box">
+            <input type="file" name="photo" accept="image/*">
 
-    <div class="upload-content">
-      <div class="upload-icon">📷</div>
-      <p>Upload photo</p>
-      <span>JPG, PNG | clean, professional photo</span>
-    </div>
-  </label>
-</div>
+            <div class="upload-content">
+              <div class="upload-icon">📷</div>
+              <p>Upload photo</p>
+              <span>JPG, PNG | clean, professional photo</span>
+            </div>
+          </label>
+        </div>
 
+        <!-- HIDDEN FIELDS -->
+        <input type="hidden" name="_subject" value="New Application - AlmaPro">
+
+        <!-- SUBMIT -->
         <button type="submit" class="btn-primary">Submit for Review</button>
 
       </form>

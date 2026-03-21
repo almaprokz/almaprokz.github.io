@@ -825,7 +825,7 @@ font-size:14px;
 .form-inner {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 10px; /* 🔥 fixes right-side imbalance */
+  padding: 0 20px; /* 🔥 MATCH THIS */
 }
 
 /* FORM */
@@ -846,6 +846,10 @@ padding:28px; /* was 25 */
 border-radius:12px; /* smoother */
 margin-bottom:28px;
 box-shadow:0 2px 10px rgba(0,0,0,0.04);
+}
+
+input {
+  margin-bottom: 0; /* 🔥 remove extra stacking conflict */
 }
 
 .phone-input {
@@ -873,8 +877,8 @@ box-shadow:0 2px 10px rgba(0,0,0,0.04);
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px; /* was 15 → slight improvement */
-  margin-bottom: 16px;
+  gap: 20px; /* 🔥 increase from 15 */
+  margin-bottom: 18px;
 }
 
 .form-block input{
@@ -901,6 +905,7 @@ padding:12px;
 border:1px solid #ddd;
 border-radius:8px;
 font-size:14px;
+background: #fff;
 }
 
 textarea{
@@ -948,10 +953,23 @@ margin-top:10px;
   background: white;
   cursor: pointer;
   transition: 0.2s;
+  display: block; /* 🔥 THIS FIXES IT */
+  width: 100%;
+}
+
+.upload-box input {
+  display: none;
 }
 
 .upload-box:hover {
   border-color: #2b5fb8;
+  background: #f9fbff;
+}
+
+.upload-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .upload-content p {
@@ -962,6 +980,10 @@ margin-top:10px;
 .upload-content span {
   font-size: 12px;
   color: #888;
+}
+
+.upload-icon {
+  font-size: 24px;
 }
 
 .form-note{
