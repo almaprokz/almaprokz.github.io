@@ -57,9 +57,16 @@
           <input type="text" placeholder="Current Location (Almaty)">
 
           <div class="form-row">
-            <input type="text" placeholder="WhatsApp Number">
-            <input type="email" placeholder="Email (Optional)">
-          </div>
+  <div class="phone-input">
+    <select>
+      <option>+7</option>
+      <option>+77</option>
+    </select>
+    <input type="text" placeholder="WhatsApp Number">
+  </div>
+
+  <input type="email" placeholder="Email (Optional)">
+</div>
         </div>
 
         <!-- PROFESSIONAL -->
@@ -101,6 +108,21 @@
           <div class="char-count">0 / 300</div>
         </div>
 
+        <!-- PROFILE PHOTO -->
+        <div class="form-block">
+  <h3>Profile photo</h3>
+
+  <label class="upload-box">
+    <input type="file" name="photo" accept="image/*" hidden>
+
+    <div class="upload-content">
+      <div class="upload-icon">📷</div>
+      <p>Upload photo</p>
+      <span>JPG, PNG | clean, professional photo</span>
+    </div>
+  </label>
+</div>
+
         <button type="submit" class="btn-primary">Submit for Review</button>
 
       </form>
@@ -109,6 +131,7 @@
 
   </div>
 </section>
+
 
     <!-- ✅ SUCCESS MESSAGE (SEPARATE) -->
     <div class="success-message" id="successMessage" style="display:none;">
@@ -187,6 +210,17 @@ window.addEventListener("scroll", function() {
     header.classList.add("shrink");
   } else {
     header.classList.remove("shrink");
+  }
+});
+</script>
+
+<script>
+  // Image preview
+const fileInput = document.querySelector('input[type="file"]');
+
+fileInput.addEventListener("change", () => {
+  if(fileInput.files.length > 0){
+    alert("Photo selected: " + fileInput.files[0].name);
   }
 });
 </script>
