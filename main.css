@@ -953,17 +953,17 @@ margin-top:10px;
   background: white;
   cursor: pointer;
   transition: 0.2s;
-  display: block; /* 🔥 THIS FIXES IT */
+  display: block;
   width: 100%;
-}
-
-.upload-box input {
-  display: none;
 }
 
 .upload-box:hover {
   border-color: #2b5fb8;
   background: #f9fbff;
+}
+
+.upload-box input {
+  display: none;
 }
 
 .upload-content {
