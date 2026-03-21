@@ -84,6 +84,7 @@
             <div class="tag">Live-in</div>
             <div class="tag">Live-out</div>
           </div>
+          <input type="hidden" name="schedule" id="scheduleInput">
         </div>
 
         <!-- SALARY -->
@@ -217,13 +218,44 @@ window.addEventListener("scroll", function() {
 </script>
 
 <script>
-  // Image preview
-const fileInput = document.querySelector('input[type="file"]');
+document.addEventListener("DOMContentLoaded", () => {
+  const fileInput = document.querySelector('input[type="file"]');
 
-fileInput.addEventListener("change", () => {
-  if(fileInput.files.length > 0){
-    alert("Photo selected: " + fileInput.files[0].name);
-  }
+  if (!fileInput) return;
+
+  fileInput.addEventListener("change", () => {
+    if(fileInput.files.length > 0){
+      alert("Photo selected: " + fileInput.files[0].name);
+    }
+  });
+});
+</script>
+
+<script>
+// ===== TAG SELECTION (SCHEDULE) =====
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const tags = document.querySelectorAll(".tag");
+  const scheduleInput = document.getElementById("scheduleInput");
+
+  tags.forEach(tag => {
+    tag.addEventListener("click", () => {
+
+      tag.classList.toggle("active");
+
+      // collect selected tags
+      const selected = Array.from(document.querySelectorAll(".tag.active"))
+        .map(tag => tag.innerText);
+
+      // update hidden input
+      if (scheduleInput) {
+        scheduleInput.value = selected.join(", ");
+      }
+
+    });
+  });
+
 });
 </script>
 
