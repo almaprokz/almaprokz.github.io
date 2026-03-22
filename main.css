@@ -123,11 +123,10 @@ margin-bottom:8px;
 
 /* BASE */
 .btn {
-  display: flex;              /* 🔥 not inline-flex */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 12px 22px;
-  height: 46px;
   border-radius: 8px;
   font-size: 15px;
   font-weight: 600;
@@ -144,7 +143,7 @@ margin-bottom:8px;
 .btn-primary {
   background: #2b5fb8;
   color: white;
-  border: 1px solid transparent; /* 🔥 KEY FIX */
+  border: 1px solid transparent;
 }
 
 .btn-primary:hover {
