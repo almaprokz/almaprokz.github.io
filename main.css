@@ -117,6 +117,7 @@ margin-bottom:8px;
 .hero-buttons {
   margin-top: 40px;
   align-items: center;
+  display: flex;
 }
 
 /* BASE */
