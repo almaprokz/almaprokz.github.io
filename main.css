@@ -117,37 +117,45 @@ margin-bottom:8px;
 .hero-buttons {
   display: flex;
   gap: 16px;
-  margin-top: 50px;
-  align-items: center; /* 🔥 THIS FIXES IT */
+  margin-top: 40px;
 }
 
-.hero-buttons a {
-  min-width: 200px;
+/* BASE BUTTON (shared) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  height: 46px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
 }
 
+/* PRIMARY */
 .btn-primary {
   background: #2b5fb8;
   color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
+  border: none;
 }
 
-.btn-primary:hover{
-background:#1f4fa3;
-transform:translateY(-2px);
+.btn-primary:hover {
+  background: #1f4fa3;
+  transform: translateY(-2px);
 }
 
+/* SECONDARY */
 .btn-secondary {
-  border: 1px solid #444;
-  border-radius: 6px;
-  text-decoration: none;
+  background: white;
   color: #222;
-  font-weight: 600;
+  border: 1px solid #ccc;
 }
 
-.btn-secondary:hover{
-background:#f3f4f6;
+.btn-secondary:hover {
+  background: #f3f4f6;
 }
 
 .hero-note{
