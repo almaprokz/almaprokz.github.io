@@ -131,10 +131,7 @@ margin-bottom:8px;
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.2s ease;
   box-sizing: border-box;
-  line-height: 1;              /* 🔥 KEY */
-  vertical-align: middle;      /* 🔥 KEY */
 }
 
 .hero-buttons a {
@@ -145,7 +142,7 @@ margin-bottom:8px;
 .btn-primary {
   background: #2b5fb8;
   color: white;
-  border: 1px solid transparent;
+  border: 1px solid transparent; /* 🔥 SAME STRUCTURE */
 }
 
 .btn-primary:hover {
