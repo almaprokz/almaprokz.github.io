@@ -137,8 +137,8 @@ margin-bottom:8px;
 }
 
 .hero-buttons a {
-  min-width: 220px;
-  height: 48px;
+  display: inline-flex;
+  vertical-align: middle; /* 🔥 THIS fixes it */
 }
 
 /* PRIMARY */
