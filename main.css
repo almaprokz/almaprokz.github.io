@@ -123,17 +123,16 @@ margin-bottom:8px;
 
 /* BASE */
 .btn {
-  transform: translateY(0.5px);
-  display: inline-flex;        /* 🔥 ONLY here */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 22px;
+  padding: 0 22px;     /* 🔥 remove vertical padding */
+  height: 48px;        /* 🔥 force equal height */
   border-radius: 8px;
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
   box-sizing: border-box;
-  line-height: 1;              /* 🔥 important */
 }
 
 /* PRIMARY */
