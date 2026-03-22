@@ -144,6 +144,14 @@ margin-bottom:8px;
   transform: translateY(-2px);
 }
 
+.hero-buttons a {
+  margin-right: 40px;
+}
+
+.hero-buttons a:last-child {
+  margin-right: 0;
+}
+
 /* SECONDARY */
 .btn-secondary {
   background: white;
