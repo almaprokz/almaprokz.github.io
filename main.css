@@ -120,15 +120,16 @@ margin-bottom:8px;
   margin-top: 50px;
 }
 
+.hero-buttons a {
+  min-width: 200px;
+}
+
 .btn-primary {
   background: #2b5fb8;
   color: white;
-  padding: 12px 24px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.2s;
-  display: inline-block;
 }
 
 .btn-primary:hover{
@@ -138,13 +139,10 @@ transform:translateY(-2px);
 
 .btn-secondary {
   border: 1px solid #444;
-  padding: 12px 24px;
   border-radius: 6px;
   text-decoration: none;
   color: #222;
   font-weight: 600;
-  transition: all 0.2s ease;
-  display: inline-block; /* 🔥 fix */
 }
 
 .btn-secondary:hover{
