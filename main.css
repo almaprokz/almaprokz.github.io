@@ -115,7 +115,6 @@ margin-bottom:8px;
 }
 
 .hero-buttons {
-  display: flex;
   gap: 24px;
   margin-top: 40px;
   align-items: center;
@@ -125,10 +124,9 @@ margin-bottom:8px;
 .btn {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   padding: 0 22px;     /* 🔥 remove vertical padding */
   height: 48px;        /* 🔥 force equal height */
-  border-radius: 8px;
+  border-radius: 6px;
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
