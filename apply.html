@@ -108,19 +108,22 @@
         </div>
 
         <!-- PROFILE PHOTO -->
-        <div class="form-block">
-          <h3>Profile photo</h3>
+    <div class="form-block">
+  <h3>Profile photo</h3>
 
-          <label class="upload-box">
-            <input type="file" name="photo" accept="image/*">
+  <label class="upload-box">
+    <input type="file" id="photoInput" accept="image/*">
 
-            <div class="upload-content">
-              <div class="upload-icon">📷</div>
-              <p>Upload photo</p>
-              <span>JPG, PNG | clean, professional photo</span>
-            </div>
-          </label>
-        </div>
+    <div class="upload-content">
+      <div class="upload-icon">📷</div>
+      <p>Upload photo</p>
+      <span>JPG, PNG | clean, professional photo</span>
+    </div>
+  </label>
+
+  <!-- hidden input for Formspree -->
+  <input type="hidden" name="photo_url" id="photoUrl">
+</div>
 
         <!-- HIDDEN FIELDS -->
         <input type="hidden" name="_subject" value="New Application - AlmaPro">
@@ -254,6 +257,45 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
     });
+  });
+
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const fileInput = document.getElementById("photoInput");
+  const photoUrlInput = document.getElementById("photoUrl");
+
+  if (!fileInput) return;
+
+  fileInput.addEventListener("change", async () => {
+
+    const file = fileInput.files[0];
+    if (!file) return;
+
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", "almapro_upload");
+
+    try {
+      const res = await fetch("https://api.cloudinary.com/v1_1/dxepkw1qb/image/upload", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await res.json();
+
+      // Save URL to hidden input (this goes to Formspree)
+      photoUrlInput.value = data.secure_url;
+
+      alert("Photo uploaded successfully ✅");
+
+    } catch (err) {
+      alert("Upload failed ❌");
+    }
+
   });
 
 });
