@@ -156,7 +156,7 @@ margin-bottom:8px;
 .btn-secondary {
   background: white;
   color: #222;
-  border: 1px solid #ccc;
+  border: 1px solid transparent;
 }
 
 .btn-secondary:hover {
