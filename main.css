@@ -116,16 +116,14 @@ margin-bottom:8px;
 
 .hero-buttons {
   display: flex;
-  align-items: center;
-  gap: 24px;             /* 👈 more space */
+  gap: 24px;
   margin-top: 40px;
   align-items: center;
-  min-width: 220px;    /* 👈 fixes vertical misalignment */
 }
 
 /* BASE */
 .btn {
-  display: flex;
+  display: inline-flex;        /* 🔥 ONLY here */
   align-items: center;
   justify-content: center;
   padding: 12px 22px;
@@ -134,18 +132,14 @@ margin-bottom:8px;
   font-weight: 600;
   text-decoration: none;
   box-sizing: border-box;
-}
-
-.hero-buttons a {
-  display: inline-flex;
-  vertical-align: middle; /* 🔥 THIS fixes it */
+  line-height: 1;              /* 🔥 important */
 }
 
 /* PRIMARY */
 .btn-primary {
   background: #2b5fb8;
   color: white;
-  border: 1px solid transparent; /* 🔥 SAME STRUCTURE */
+  border: 1px solid transparent;
 }
 
 .btn-primary:hover {
