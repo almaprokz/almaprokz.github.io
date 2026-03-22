@@ -116,14 +116,16 @@ margin-bottom:8px;
 
 .hero-buttons {
   display: flex;
+  align-items: center;
   gap: 24px;             /* 👈 more space */
   margin-top: 40px;
-  align-items: center;    /* 👈 fixes vertical misalignment */
+  align-items: center;
+  min-width: 220px;    /* 👈 fixes vertical misalignment */
 }
 
 /* BASE */
 .btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 12px 22px;
@@ -135,7 +137,8 @@ margin-bottom:8px;
 }
 
 .hero-buttons a {
-  display: flex; /* 🔥 forces same layout behavior */
+  min-width: 220px;
+  height: 48px;
 }
 
 /* PRIMARY */
