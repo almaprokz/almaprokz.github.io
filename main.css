@@ -290,6 +290,15 @@ max-width:220px;
 text-decoration: none;
 }
 
+.footer-left a {
+  text-decoration: none;  /* ❌ remove underline */
+  color: #94a3b8;         /* match your paragraph color */
+}
+
+.footer-left a:hover {
+  color: #cbd5e1;         /* optional hover (same tone as footer) */
+}
+
 .footer-logo{
 height:16px;
 margin-bottom:15px;
