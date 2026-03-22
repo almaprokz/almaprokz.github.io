@@ -141,7 +141,7 @@ margin-bottom:8px;
 .btn-primary {
   background: #2b5fb8;
   color: white;
-  border: none;
+  border: 1px
 }
 
 .btn-primary:hover {
