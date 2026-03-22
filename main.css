@@ -133,6 +133,8 @@ margin-bottom:8px;
   text-decoration: none;
   transition: all 0.2s ease;
   box-sizing: border-box;
+  line-height: 1;              /* 🔥 KEY */
+  vertical-align: middle;      /* 🔥 KEY */
 }
 
 .hero-buttons a {
