@@ -123,6 +123,7 @@ margin-bottom:8px;
 
 /* BASE */
 .btn {
+  transform: translateY(0.5px);
   display: inline-flex;        /* 🔥 ONLY here */
   align-items: center;
   justify-content: center;
