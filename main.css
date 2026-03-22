@@ -285,10 +285,8 @@ justify-content:space-between;
 align-items:flex-start;
 }
 
-.footer-left a,
-.footer-right a {
-  text-decoration: none;
-  color: inherit;
+.footer-left{
+max-width:220px;
 }
 
 .footer-logo{
@@ -299,6 +297,12 @@ margin-bottom:15px;
 .footer-left p{
 color:#94a3b8;
 line-height:1.5;
+}
+
+.footer-right{
+display:flex;
+flex-direction:column;
+gap:10px;
 }
 
 .footer-title{
