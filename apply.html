@@ -18,7 +18,23 @@
       </a>
     </div>
 
-    <div class="menu">☰</div>
+     <div class="menu" id="openMenu">☰</div>
+    <!-- OVERLAY -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- SIDE MENU -->
+<div class="side-menu" id="sideMenu">
+  <div class="menu-header">
+    <span class="close-btn" id="closeMenu">✕</span>
+  </div>
+
+  <nav class="menu-links">
+    <a href="index.html">Home</a>
+    <a href="nannies.html">Find a Specialist</a>
+    <a href="apply.html">For Professionals</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</div>
 
   </div>
 </header>
@@ -323,6 +339,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 
+});
+</script>
+
+<!--Navigation-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const openBtn = document.getElementById("openMenu");
+  const closeBtn = document.getElementById("closeMenu");
+  const menu = document.getElementById("sideMenu");
+  const overlay = document.getElementById("navOverlay");
+
+  openBtn.addEventListener("click", () => {
+    menu.classList.add("active");
+    overlay.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+
+  function closeMenu() {
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+  }
 });
 </script>
 
