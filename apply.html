@@ -52,13 +52,17 @@
   </div>
 </section>
 
-<!-- APPLY FORM -->
 <section class="apply-form">
   <div class="form-wrapper">
-
     <div class="form-inner">
 
       <form action="https://formspree.io/f/mgonqoye" method="POST">
+
+        <!-- 🔥 REDIRECT AFTER SUBMIT -->
+        <input type="hidden" name="_redirect" value="success.html">
+
+        <!-- SUBJECT -->
+        <input type="hidden" name="_subject" value="New Application - AlmaPro">
 
         <!-- BASIC -->
         <div class="form-block">
@@ -72,34 +76,20 @@
           <input type="text" name="location" placeholder="Current Location (Almaty)" required>
 
           <div class="form-row">
-            <div class="phone-input">
-              <select name="country_code">
-                <option value="+7">+7</option>
-              </select>
-              <input type="text" name="whatsapp" placeholder="WhatsApp Number" required>
-            </div>
-
-            <input type="email" name="email" placeholder="Email (Optional)">
+            <input type="text" name="whatsapp" placeholder="WhatsApp Number" required>
+            <input type="email" name="email" placeholder="Email">
           </div>
         </div>
 
         <!-- PROFESSIONAL -->
         <div class="form-block">
-          <h3>Professional information</h3>
+          <h3>Professional Information</h3>
 
           <div class="form-row">
             <input type="text" name="experience" placeholder="Years of experience">
-            <input type="text" name="languages" placeholder="Languages Spoken">
+            <input type="text" name="languages" placeholder="Languages">
           </div>
 
-          <p class="label">Preferred Schedule</p>
-
-          <div class="tags">
-            <div class="tag">Full-time</div>
-            <div class="tag">Part-time</div>
-            <div class="tag">Live-in</div>
-            <div class="tag">Live-out</div>
-          </div>
           <input type="hidden" name="schedule" id="scheduleInput">
         </div>
 
@@ -107,66 +97,27 @@
         <div class="form-block">
           <h3>Salary Expectation</h3>
 
-          <div class="salary-row">
-            <span>Expected salary (KZT / month)</span>
-            <input type="text" name="salary" placeholder="350 000–500 000">
-          </div>
+          <input type="text" name="salary" placeholder="350 000–500 000">
         </div>
 
         <!-- ABOUT -->
         <div class="form-block">
           <h3>About you</h3>
 
-          <textarea id="about" name="about" maxlength="300"
-            placeholder="Tell us about your experience working with families"></textarea>
-
-          <div class="char-count">0 / 300</div>
+          <textarea name="about" placeholder="Tell us about your experience"></textarea>
         </div>
 
-        <!-- PROFILE PHOTO -->
-    <div class="form-block">
-  <h3>Profile photo</h3>
-
-    <label class="upload-box">
-  <input type="file" id="photoInput" accept="image/*">
-
-  <div class="upload-content" id="uploadContent">
-    <div class="upload-icon">📷</div>
-    <p>Upload photo</p>
-    <span>JPG, PNG | clean, professional photo</span>
-  </div>
-
-  <!-- image preview -->
-  <img id="previewImage" style="display:none;" />
-</label>
-
-<input type="hidden" name="photo_url" id="photoUrl">
-</div>
-
-        <!-- HIDDEN FIELDS -->
-        <input type="hidden" name="_subject" value="New Application - AlmaPro">
+        <!-- PHOTO -->
+        <input type="hidden" name="photo_url" id="photoUrl">
 
         <!-- SUBMIT -->
-        <button type="submit" class="btn-primary">Submit for Review</button>
+        <button type="submit" class="btn btn-primary">
+          Submit for Review
+        </button>
 
       </form>
 
     </div>
-
-  </div>
-</section>
-
-
-    <!-- ✅ SUCCESS MESSAGE (SEPARATE) -->
-    <div class="success-message" id="successMessage" style="display:none;">
-      <div class="success-box">
-        <div class="success-icon">✔</div>
-        <h2>Application Submitted</h2>
-        <p>Thank you! We will review your application and contact you shortly.</p>
-        <a href="index.html" class="btn-primary">Back to Home</a>
-      </div>
-    </div>
-
   </div>
 </section>
 
