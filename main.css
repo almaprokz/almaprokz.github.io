@@ -1270,3 +1270,7 @@ font-size:14px;
 .menu-links a:hover {
   color: #2b5fb8;
 }
+
+html {
+  scroll-behavior: smooth;
+}
