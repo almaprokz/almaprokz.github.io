@@ -798,11 +798,11 @@ margin-top:30px;
   margin-top: 20px;
 }
 
-/* BACK BUTTON */
-.back-btn{
-text-align:center;
-margin-top:100px;
-}
+  /* BACK BUTTON */
+  .back-btn{
+  text-align:center;
+  margin-top:100px;
+  }
 
 @media (max-width:768px){
 
