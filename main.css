@@ -1189,3 +1189,84 @@ margin-top:10px;
 color:#666;
 font-size:14px;
 }
+
+/* OVERLAY */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.menu {
+  cursor: pointer;   /* 🔥 makes it feel clickable */
+}
+
+.menu:hover {
+  opacity: 0.7;
+}
+
+/* MENU PANEL */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100%;
+
+  background: #f7f7f7;           /* 🔥 light gray */
+  border-left: 1px solid #e5e7eb; /* 🔥 subtle border */
+
+  padding: 30px 20px;
+  transition: 0.3s;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ACTIVE STATE */
+.side-menu.active {
+  right: 0;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* MENU CONTENT */
+.menu-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn {
+  font-size: 24px;
+  cursor: pointer;
+  color: #222;
+}
+
+.menu-links {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-links a {
+  color: #222;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.menu-links a:hover {
+  color: #2b5fb8;
+}
