@@ -1228,111 +1228,85 @@ html {
 /* ================= MOBILE VERSION Main Page ================= */
 @media (max-width: 768px) {
 
-/* GLOBAL MOBILE BASE */
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #f5f5f5;
-  color: #1a1a1a;
-}
+  .mobile-hero {
+    padding: 24px 20px;
+    background: #f5f5f5;
+  }
 
-/* CONTAINER — FIXES YOUR WIDTH ISSUE */
-.container {
-  width: 100%;
-  max-width: 100%;
-  padding: 24px 20px;
-  box-sizing: border-box;
-}
+  .mobile-hero .hero-inner {
+    width: 100%;
+    max-width: 100%;
+  }
 
-/* HERO SECTION */
-.hero {
-  background: #f5f5f5;
-}
+  .mobile-hero h1 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
 
-/* TITLE */
-.hero h1 {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 16px;
-}
+  .mobile-hero .subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 28px;
+  }
 
-/* SUBTITLE */
-.subtitle {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 28px;
-}
+  .mobile-hero .features {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 32px;
+  }
 
-/* FEATURES */
-.features {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin-bottom: 32px;
-}
+  .mobile-hero .feature {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
 
-.feature {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-}
+  .mobile-hero .feature span {
+    color: #2f5bd3;
+    margin-top: 3px;
+  }
 
-.feature span {
-  font-size: 14px;
-  color: #2f5bd3;
-  margin-top: 3px;
-}
+  .mobile-hero .feature p {
+    margin: 0;
+    font-size: 13px;
+  }
 
-.feature p {
-  margin: 0;
-  font-size: 13px;
-}
+  .mobile-hero .feature small {
+    color: #777;
+    font-size: 12px;
+  }
 
-.feature small {
-  display: block;
-  color: #777;
-  font-size: 12px;
-  margin-top: 2px;
-}
+  .mobile-hero .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
 
-/* BUTTONS */
-.hero-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 16px;
-}
+  .mobile-hero .btn {
+    width: 100%;
+    padding: 14px;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+  }
 
-/* BASE BUTTON */
-.btn {
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 14px;
-  border-radius: 6px;
-  font-size: 14px;
-  text-decoration: none;
-  font-weight: 500;
-}
+  .mobile-hero .primary {
+    background: #2f5bd3;
+    color: white;
+  }
 
-/* PRIMARY BUTTON */
-.btn.primary {
-  background: #2f5bd3;
-  color: white;
-}
+  .mobile-hero .secondary {
+    border: 1px solid #999;
+    color: #333;
+  }
 
-/* SECONDARY BUTTON */
-.btn.secondary {
-  border: 1px solid #999;
-  color: #333;
-  background: transparent;
-}
-
-/* NOTE TEXT */
-.note {
-  font-size: 11px;
-  color: #777;
-}
+  .mobile-hero .note {
+    font-size: 11px;
+    color: #777;
+  }
 
 }
