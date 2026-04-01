@@ -1225,122 +1225,114 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ================= MOBILE VERSION ================= */
+/* ================= MOBILE VERSION Main Page ================= */
 @media (max-width: 768px) {
 
-  /* GENERAL */
-  body {
-    padding: 0 15px;
-  }
-
-  h1 {
-    font-size: 26px;
-  }
-
-  h2 {
-    font-size: 22px;
-  }
-
-  p {
-    font-size: 14px;
-  }
-
-  /* HERO SECTION */
-  .hero {
-    text-align: center;
-    padding: 40px 15px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .hero-buttons a {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* GRID → STACK */
-  .categories-grid,
-  .info-grid,
-  .reviews-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  /* PROFILE CARD */
-  .profile-card {
-    width: 100%;
-  }
-
-  /* BUTTONS */
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* BACK BUTTON */
-  .back-btn {
-    margin-top: 40px;
-  }
-
+/* GLOBAL MOBILE BASE */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f5f5f5;
+  color: #1a1a1a;
 }
 
-/* ================= TABLET VERSION ================= */
-@media (max-width: 1024px) {
+/* CONTAINER — FIXES YOUR WIDTH ISSUE */
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 24px 20px;
+  box-sizing: border-box;
+}
 
-  /* GENERAL */
-  body {
-    padding: 0 20px;
-  }
+/* HERO SECTION */
+.hero {
+  background: #f5f5f5;
+}
 
-  h1 {
-    font-size: 32px;
-  }
+/* TITLE */
+.hero h1 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
 
-  h2 {
-    font-size: 26px;
-  }
+/* SUBTITLE */
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 28px;
+}
 
-  /* HERO */
-  .hero {
-    padding: 60px 20px;
-  }
+/* FEATURES */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 32px;
+}
 
-  .hero-buttons {
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.feature {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
 
-  /* GRID ADJUST */
-  .categories-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.feature span {
+  font-size: 14px;
+  color: #2f5bd3;
+  margin-top: 3px;
+}
 
-  .info-grid {
-    grid-template-columns: 1fr;
-  }
+.feature p {
+  margin: 0;
+  font-size: 13px;
+}
 
-  .reviews-grid {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.feature small {
+  display: block;
+  color: #777;
+  font-size: 12px;
+  margin-top: 2px;
+}
 
-  /* CARDS */
-  .profile-card {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-  }
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
 
-  /* BUTTONS */
-  .btn-primary,
-  .btn-secondary {
-    padding: 12px 20px;
-  }
+/* BASE BUTTON */
+.btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* PRIMARY BUTTON */
+.btn.primary {
+  background: #2f5bd3;
+  color: white;
+}
+
+/* SECONDARY BUTTON */
+.btn.secondary {
+  border: 1px solid #999;
+  color: #333;
+  background: transparent;
+}
+
+/* NOTE TEXT */
+.note {
+  font-size: 11px;
+  color: #777;
+}
 
 }
