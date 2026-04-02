@@ -1263,6 +1263,31 @@ html {
   padding-right: 22px;
 }
 
+ /* ✅ ALIGN HEADER WITH CONTENT */
+.header {
+    background: #f7f7f7;
+  }
+ 
+  .header-inner {
+    padding-left: 22px;
+    padding-right: 22px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* ✅ LOGO SIZE (smaller, cleaner) */
+  .logo img {
+    height: 24px;
+  }
+
+  /* ✅ BURGER ICON (bigger + balanced) */
+  .menu {
+    font-size: 22px;
+    line-height: 1;
+  }
+
   /* ✅ HERO EXTRA CONTROL */
   .hero {
     padding-left: 20px;
