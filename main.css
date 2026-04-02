@@ -180,6 +180,10 @@ font-size:28px;
 margin-bottom:40px;
 }
 
+.category-card h3 {
+  color: #222;
+}
+
 .categories-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -192,6 +196,17 @@ padding:24px;
 border-radius:8px;
 border:1px solid #e6e6e6;
 transition:all 0.25s ease;
+}
+
+.category-card {
+  display: block;              /* makes <a> behave like a card */
+  text-decoration: none;       /* remove blue underline */
+  color: inherit;              /* remove blue text */
+}
+
+.category-card * {
+  text-decoration: none;
+  color: inherit;
 }
 
 .card-link {
