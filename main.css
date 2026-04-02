@@ -1417,3 +1417,149 @@ category-card:active {
     max-width: 100%;
   }
 }
+
+
+/* MOBILE PROFESSIONALS PAGE */
+@media (max-width: 768px) {
+
+  /* ✅ CONTAINER SPACING */
+  .container {
+    max-width: 100%;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  /* =========================
+     INTRO SECTION
+  ========================= */
+  .nannies-intro {
+    padding: 40px 0;
+  }
+
+  .nannies-intro h1 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  .intro-sub {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .intro-list {
+    padding-left: 16px;
+  }
+
+  .intro-list li {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  /* =========================
+     HEADER SECTION (title + sort)
+  ========================= */
+  .list-header {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .list-header h1 {
+    font-size: 24px;
+  }
+
+  .list-header p {
+    font-size: 14px;
+  }
+
+  .sort-box {
+    width: 100%;
+  }
+
+  .sort-btn {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border-radius: 6px;
+  }
+
+  /* =========================
+     GRID → STACK
+  ========================= */
+  .nannies-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* =========================
+     CARD (IMPORTANT)
+  ========================= */
+  .nanny-card {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .card-top {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .nanny-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+  }
+
+  .card-info h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .experience {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+
+  .status {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  /* status colors */
+  .status.available {
+    color: #2b5fb8;
+  }
+
+  .status.booked {
+    color: #777;
+  }
+
+  /* divider */
+  .card-divider {
+    height: 1px;
+    background: #e5e7eb;
+    margin: 15px 0;
+  }
+
+  /* footer link */
+  .card-footer a {
+    color: #2b5fb8;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  /* =========================
+     LOAD MORE BUTTON
+  ========================= */
+  .load-more {
+    margin-top: 40px;
+  }
+
+  .load-more .btn-primary {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+
+}
