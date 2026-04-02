@@ -1227,3 +1227,112 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
+/*Mobile main page*/
+@media (max-width: 768px) {
+
+  /* ✅ FIX CONTAINER */
+  .container {
+    padding: 0 16px;
+    max-width: 100%;
+  }
+
+  /* ✅ HERO */
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  /* ✅ LIST */
+  .hero-list li {
+    font-size: 14px;
+  }
+
+  /* ✅ BUTTONS STACK (IMPORTANT) */
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-buttons a {
+    margin: 0 !important;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn {
+    width: 100%;
+    height: 48px;
+  }
+
+  /* ✅ CATEGORIES (FIX GRID) */
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card {
+    width: 100%;
+  }
+
+  /* ✅ STANDARD SECTION (CRITICAL FIX) */
+  .standard-inner {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .standard-list {
+    border-left: none;
+    border-top: 2px solid #e5e7eb;
+    padding-left: 0;
+    padding-top: 20px;
+  }
+
+  /* ✅ PROFESSIONALS */
+  .professionals p {
+    max-width: 100%;
+  }
+
+  .professionals .btn-primary {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  /* ✅ FOOTER STACK */
+  .footer-inner {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-bottom p {
+    text-align: center;
+  }
+
+  /* ✅ PREVENT ZOOM / SIDE SCROLL */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  * {
+    max-width: 100%;
+  }
+}
