@@ -194,6 +194,20 @@ border:1px solid #e6e6e6;
 transition:all 0.25s ease;
 }
 
+.card-link {
+  color: #2f5fd0;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.card-link {
+  transition: all 0.2s ease;
+}
+
+.category-card:hover .card-link {
+  transform: translateX(4px);
+}
+
 .category-card:hover{
 transform:translateY(-6px);
 box-shadow:0 12px 28px rgba(0,0,0,0.08);
@@ -206,12 +220,6 @@ margin-bottom:10px;
 .category-card p{
 margin-bottom:15px;
 color:#555;
-}
-
-.category-card a{
-color:#2f5fd0;
-font-weight:500;
-text-decoration:underline;
 }
 
 .coming{
@@ -1311,7 +1319,20 @@ html {
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.25s ease;
   }
+
+  .category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+category-card:active {
+  transform: scale(0.98);
+}
 
   /* ✅ STANDARD SECTION (CRITICAL FIX) */
   .standard-inner {
