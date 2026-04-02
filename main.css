@@ -1224,3 +1224,127 @@ font-size:14px;
 html {
   scroll-behavior: smooth;
 }
+
+/* =========================
+   GLOBAL MOBILE SETTINGS
+========================= */
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container, 
+    .wrapper {
+        padding: 0 16px;
+        width: 100%;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    h1 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .row,
+    .flex,
+    .grid,
+    .header,
+    .hero,
+    .about,
+    .services {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .row > *,
+    .flex > * {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+
+    button,
+    .btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .grid,
+    .cards,
+    .services-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+
+    /* Fix overflow */
+    * {
+        max-width: 100%;
+    }
+
+    /* Prevent sideways scroll */
+    html, body {
+        overflow-x: hidden;
+    }
+}
