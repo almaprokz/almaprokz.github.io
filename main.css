@@ -1234,10 +1234,11 @@ html {
 
   /* ✅ FIX CONTAINER */
   .container {
-    padding: 0 16px;
-    max-width: 100%;
-  }
-
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 24px;
+  padding-right: 22px;
+}
   /* ✅ HERO */
   .hero {
     padding: 40px 0;
