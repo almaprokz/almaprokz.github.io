@@ -1232,6 +1232,26 @@ html {
 /*Mobile main page*/
 @media (max-width: 768px) {
 
+    /* ✅ GLOBAL SIDE SPACING */
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* ✅ HERO EXTRA CONTROL */
+  .hero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* ✅ SECTIONS ALIGNMENT */
+  .categories,
+  .standard,
+  .professionals {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   /* ✅ FIX CONTAINER */
   .container {
   max-width: 1200px;
