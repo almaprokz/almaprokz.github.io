@@ -348,6 +348,8 @@ font-size:14px;
 color:#6b7280;
 }
 
+
+/* SPECIALIST PAGE*/
 .specialist-card hr{
 margin:15px 0;
 border:none;
@@ -1225,25 +1227,3 @@ html {
   scroll-behavior: smooth;
 }
 
-
-/*Mobile fix*/
-@media (max-width: 768px) {
-
-    .row,
-    .flex,
-    .grid,
-    .cards,
-    .services,
-    .categories {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
-    }
-
-    .card,
-    .service-item,
-    .category-item {
-        width: 100% !important;
-        margin: 0 0 20px 0 !important;
-    }
-}
