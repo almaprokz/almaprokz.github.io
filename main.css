@@ -1566,14 +1566,16 @@ category-card:active {
   }
 
   .load-more .btn-primary {
-    max-width: 100%;
-    width: 100%;
+    width: calc(100% + 44px);   /* 22px + 22px container padding */
+    margin-left: -22px;         /* pull left */
+    margin-right: -22px;        /* pull right */
+    
     height: 52px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
-    box-sizing: border-box; /* 🔥 IMPORTANT */
+
+    border-radius: 8px; /* 🔥 important for edge-to-edge look */
   }
 
 /*SORT BUTTON DROPDOWN*/
