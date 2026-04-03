@@ -1561,22 +1561,7 @@ category-card:active {
   /* =========================
      LOAD MORE BUTTON
   ========================= */
-  .load-more {
-    margin-top: 120px;
-  }
-
-  .load-more .btn-primary {
-    width: calc(100% + 44px);   /* 22px + 22px container padding */
-    margin-left: -22px;         /* pull left */
-    margin-right: -22px;        /* pull right */
-    
-    height: 52px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 8px; /* 🔥 important for edge-to-edge look */
-  }
+ 
 
 /*SORT BUTTON DROPDOWN*/
 .sort-dropdown {
