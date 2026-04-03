@@ -1563,7 +1563,6 @@ category-card:active {
   ========================= */
   .load-more {
     margin-top: 120px;
-    max-width: 100%;
   }
 
   .load-more .btn-primary {
