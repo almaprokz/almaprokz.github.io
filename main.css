@@ -1430,6 +1430,7 @@ category-card:active {
 .sort-menu {
   z-index: 9999;
 }
+
   /* ✅ CONTAINER SPACING */
   .container {
     max-width: 100%;
