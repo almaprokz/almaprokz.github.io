@@ -1558,21 +1558,6 @@ category-card:active {
     text-decoration: none;
   }
 
-  /* =========================
-     LOAD MORE BUTTON
-  ========================= */
- .load-more .container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .load-more .btn-primary {
-    width: 100%;
-    height: 52px;
-    border-radius: 0;
-  }
-
-
 
 /*SORT BUTTON DROPDOWN*/
 .sort-dropdown {
@@ -1615,6 +1600,28 @@ category-card:active {
 
   .sort-item:hover {
     background: #f3f4f6;
+  }
+
+}
+
+  /* =========================
+     LOAD MORE BUTTON
+  ========================= */
+ @media (max-width: 768px) {
+
+  .load-more {
+    margin-top: 60px;
+  }
+
+  .load-more .btn-primary {
+    width: 100%;
+    height: 52px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 8px;
   }
 
 }
