@@ -1609,20 +1609,23 @@ category-card:active {
   ========================= */
 @media (max-width: 768px) {
 
+  .load-more {
+    width: 100%;
+  }
+
   .load-more .btn-primary {
-    display: flex;
+    display: block;
     width: 100%;
 
     height: 48px;
-    padding: 0 20px;        /* 🔥 bring this back */
+    line-height: 48px;
 
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 
-    font-size: 15px;
+    padding: 0;              /* remove flex behavior issues */
     white-space: nowrap;
 
-    box-sizing: border-box; /* 🔥 prevents overflow */
+    box-sizing: border-box;
   }
 
 }
