@@ -1497,7 +1497,7 @@ category-card:active {
   ========================= */
   .nannies-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 32px;
   }
 
   /* =========================
