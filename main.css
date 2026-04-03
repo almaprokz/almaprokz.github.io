@@ -1615,6 +1615,8 @@ category-card:active {
   }
 
   .load-more .btn-primary {
+    white-space: nowrap;
+    font-size: 14px;
     width: 100%;
     height: 52px;
 
