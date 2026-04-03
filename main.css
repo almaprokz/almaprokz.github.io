@@ -1611,7 +1611,7 @@ category-card:active {
 
   .load-more {
     margin-top: 60px;
-    width:100%;
+    max-width:100%;
   }
 
   .load-more .btn-primary {
