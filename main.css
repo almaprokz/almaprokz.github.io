@@ -1607,16 +1607,19 @@ category-card:active {
   /* =========================
      LOAD MORE BUTTON
   ========================= */
- @media (max-width: 768px) {
-
-  .load-more {
-    max-width: 100%;
-  }
+@media (max-width: 768px) {
 
   .load-more .btn-primary {
     width: 100%;
     display: inline-flex;
     justify-content: center;
+    align-items: center;
+
+    height: 48px;        /* same as homepage */
+    padding: 0 20px;     /* important */
+    font-size: 15px;
+
+    white-space: nowrap; /* 🔥 prevents line break */
   }
 
 }
