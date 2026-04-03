@@ -1610,21 +1610,13 @@ category-card:active {
  @media (max-width: 768px) {
 
   .load-more {
-    margin-top: 60px;
-    max-width:100%;
+    max-width: 100%;
   }
 
   .load-more .btn-primary {
-    white-space: nowrap;
-    font-size: 14px;
     width: 100%;
-    height: 52px;
-
-    display: flex;
+    display: inline-flex;
     justify-content: center;
-    align-items: center;
-
-    border-radius: 8px;
   }
 
 }
