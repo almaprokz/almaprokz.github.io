@@ -1609,21 +1609,20 @@ category-card:active {
   ========================= */
 @media (max-width: 768px) {
 
+  .load-more {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
   .load-more .btn-primary {
-    display: block;
-
-    width: 100vw;                         /* full screen width */
-    margin-left: calc(50% - 50vw);        /* 🔥 perfect centering */
-
+    width: 100%;
     height: 48px;
+
+    display: block;
+    text-align: center;
     line-height: 48px;
 
-    text-align: center;
-
     white-space: nowrap;
-    box-sizing: border-box;
-
-    border-radius: 0; /* optional: full edge look */
   }
 
 }
