@@ -1610,24 +1610,30 @@ category-card:active {
 @media (max-width: 768px) {
 
   .load-more {
-    display: flex;
-    max-width: 100%;
-    justify-content: center;
+    width: 100%;
   }
 
   .load-more .btn-primary {
-    
-    width: auto;
+    all: unset; /* 🔥 reset EVERYTHING */
 
-    height: 48px;
-    line-height: 48px;
+    display: block;
+    width: 100%;
+
+    height: 52px;
+    line-height: 52px;
 
     text-align: center;
 
-    padding: 0 24px;              /* remove flex behavior issues */
+    background: #2b5fb8;
+    color: white;
+
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+
     white-space: nowrap;
 
-    box-sizing: border-box;  
+    box-sizing: border-box;
   }
 
 }
