@@ -1612,6 +1612,8 @@ category-card:active {
   .load-more {
     max-width: 100%;
     width: 80%;
+    display: flex;
+  justify-content: center;
   }
 
   .load-more .btn-primary {
@@ -1627,7 +1629,6 @@ category-card:active {
     white-space: nowrap;
 
     box-sizing: border-box;
-    align-items: center;
     
   }
 
