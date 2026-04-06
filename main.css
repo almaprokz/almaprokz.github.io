@@ -1614,12 +1614,6 @@ category-card:active {
   }
 
   .load-more .btn-primary {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-}
-
-
-  .load-more .btn-primary {
     display: block;
     width: 100%;
 
