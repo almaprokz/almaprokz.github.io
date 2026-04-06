@@ -1609,31 +1609,21 @@ category-card:active {
   ========================= */
 @media (max-width: 768px) {
 
-  .load-more {
-    width: 100%;
-  }
-
   .load-more .btn-primary {
-    all: unset; /* 🔥 reset EVERYTHING */
-
     display: block;
-    width: 100%;
 
-    height: 52px;
-    line-height: 52px;
+    width: 100vw;                         /* full screen width */
+    margin-left: calc(50% - 50vw);        /* 🔥 perfect centering */
+
+    height: 48px;
+    line-height: 48px;
 
     text-align: center;
 
-    background: #2b5fb8;
-    color: white;
-
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 600;
-
     white-space: nowrap;
-
     box-sizing: border-box;
+
+    border-radius: 0; /* optional: full edge look */
   }
 
 }
