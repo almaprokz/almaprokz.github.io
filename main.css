@@ -1611,6 +1611,7 @@ category-card:active {
 
   .load-more {
     max-width: 100%;
+    width: 100%;
   }
 
   .load-more .btn-primary {
