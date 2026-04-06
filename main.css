@@ -1614,6 +1614,12 @@ category-card:active {
   }
 
   .load-more .btn-primary {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+
+  .load-more .btn-primary {
     display: block;
     width: 100%;
 
@@ -1626,9 +1632,7 @@ category-card:active {
     white-space: nowrap;
 
     box-sizing: border-box;
-    width: calc(100% + 44px);   /* expand beyond container */
-    margin-left: -22px;         /* pull left */
-    margin-right: -22px;        /* pull right */
+    
   }
 
 }
