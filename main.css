@@ -1626,6 +1626,9 @@ category-card:active {
     white-space: nowrap;
 
     box-sizing: border-box;
+    width: calc(100% + 44px);   /* expand beyond container */
+    margin-left: -22px;         /* pull left */
+    margin-right: -22px;        /* pull right */
   }
 
 }
