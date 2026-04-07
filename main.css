@@ -1603,27 +1603,3 @@ category-card:active {
   }
 
 }
-
-  /* =========================
-     LOAD MORE BUTTON
-  ========================= */
-@media (max-width: 768px) {
-
-  .load-more {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  .load-more .btn-primary {
-    width: 100%;
-    max-width: 100%;
-    display: block;
-
-    height: 48px;
-    line-height: 48px;
-    text-align: center;
-
-    white-space: nowrap;
-  }
-
-}
