@@ -1603,3 +1603,123 @@ category-card:active {
   }
 
 }
+
+
+@media (max-width: 768px) {
+
+  /* =========================
+     CONTAINER
+  ========================= */
+  .container {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  /* =========================
+     HERO SECTION
+  ========================= */
+  .profile-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .profile-photo img {
+    width: 100%;
+    max-width: 140px;
+    border-radius: 10px;
+  }
+
+  .profile-info h1 {
+    font-size: 22px;
+  }
+
+  .role {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .meta p {
+    font-size: 14px;
+  }
+
+  /* BUTTON FULL WIDTH */
+  .profile-info .btn-primary {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .note {
+    font-size: 13px;
+  }
+
+  /* =========================
+     SECTIONS
+  ========================= */
+  .profile-section {
+    padding: 40px 0;
+  }
+
+  .profile-section h2 {
+    font-size: 20px;
+  }
+
+  .about-text {
+    font-size: 14px;
+  }
+
+  /* =========================
+     INFO GRID → STACK
+  ========================= */
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* =========================
+     REVIEWS
+  ========================= */
+  .reviews-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .review {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  /* BUTTON UNDER REVIEWS */
+  .profile-reviews .btn-primary {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* =========================
+     OTHER NANNIES
+  ========================= */
+  .nannies-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* =========================
+     BACK BUTTON
+  ========================= */
+  .back-btn {
+    margin-top: 40px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .back-btn .btn-primary {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+}
