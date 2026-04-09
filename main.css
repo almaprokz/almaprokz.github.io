@@ -1605,6 +1605,9 @@ category-card:active {
 }
 
 
+
+/*PROFILE PAGE*/
+
 @media (max-width: 768px) {
 
   /* =========================
@@ -1704,7 +1707,7 @@ category-card:active {
   ========================= */
   .nannies-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 50px;
   }
 
   /* =========================
