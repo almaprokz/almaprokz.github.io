@@ -1604,6 +1604,16 @@ category-card:active {
 
 }
 
+/*BUTTON FIX*/
+
+@media (max-width: 768px) {
+  .btn-primary {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 
 
 /*PROFILE PAGE*/
