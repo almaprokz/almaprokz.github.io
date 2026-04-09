@@ -1848,3 +1848,145 @@ category-card:active {
   }
 
 }
+
+/*APPLY PAGE*/
+@media (max-width: 768px) {
+
+  /* =========================
+     HERO
+  ========================= */
+  .apply-hero {
+    padding: 40px 0 20px;
+  }
+
+  .apply-hero h1 {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .badge {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+
+  /* =========================
+     FORM WRAPPER
+  ========================= */
+  .form-inner {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  /* =========================
+     FORM BLOCKS
+  ========================= */
+  .form-block {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .form-block h3 {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+  /* =========================
+     ROW → STACK
+  ========================= */
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* =========================
+     INPUTS (CRITICAL FIX)
+  ========================= */
+  input,
+  textarea {
+    width: 100% !important;   /* 🔥 override your 95% */
+    font-size: 14px;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+
+  /* =========================
+     PHONE INPUT
+  ========================= */
+  .phone-input {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .phone-input select {
+    width: 80px;
+  }
+
+  /* =========================
+     SALARY BLOCK
+  ========================= */
+  .salary-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .salary-row input {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* =========================
+     TAGS
+  ========================= */
+  .tags {
+    gap: 8px;
+  }
+
+  .tag {
+    flex: 1 1 calc(50% - 8px);
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  /* =========================
+     UPLOAD
+  ========================= */
+  .upload-box {
+    padding: 30px 20px;
+  }
+
+  .upload-content p {
+    font-size: 14px;
+  }
+
+  .upload-content span {
+    font-size: 11px;
+  }
+
+  /* =========================
+     NOTE
+  ========================= */
+  .form-note {
+    font-size: 12px;
+  }
+
+  /* =========================
+     SUBMIT BUTTON
+  ========================= */
+  .apply-form .btn-primary {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 15px;
+  }
+
+}
