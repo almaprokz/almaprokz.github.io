@@ -1608,6 +1608,7 @@ category-card:active {
 
   .load-more {
     margin-top: 40px;
+    max-width: fit-content;
   }
 
   .load-more .btn-primary {
