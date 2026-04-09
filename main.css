@@ -1604,28 +1604,6 @@ category-card:active {
 
 }
 
-@media (max-width: 768px) {
-
-  .load-more {
-    margin-top: 40px;
-    width: 100%;
-  }
-
-  .load-more .btn-primary {
-    width: 100%;
-    height: 48px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-    white-space: nowrap;
-  }
-
-}
-
-
 /*PROFILE PAGE*/
 
 @media (max-width: 768px) {
