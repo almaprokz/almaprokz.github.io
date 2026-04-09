@@ -1885,7 +1885,11 @@ category-card:active {
   ========================= */
   .form-block {
     padding: 20px;
-    margin-bottom: 20px;
+  }
+
+  .form-block input,
+  .form-block textarea {
+    margin-bottom: 12px;
   }
 
   .form-block h3 {
@@ -1896,18 +1900,20 @@ category-card:active {
   /* =========================
      ROW → STACK
   ========================= */
-  .form-row {
+    .form-row {
     grid-template-columns: 1fr;
     gap: 12px;
+    margin-bottom: 12px; /* 🔥 reduce */
   }
 
   /* =========================
      INPUTS (CRITICAL FIX)
   ========================= */
-  input,
+    input,
   textarea {
-    width: 100% !important;   /* 🔥 override your 95% */
-    font-size: 14px;
+    width: 100% !important;
+    box-sizing: border-box;
+    margin: 0; /* 🔥 important */
   }
 
   textarea {
@@ -1918,12 +1924,18 @@ category-card:active {
      PHONE INPUT
   ========================= */
   .phone-input {
-    flex-direction: row;
-    gap: 8px;
+    display: flex;
+    gap: 10px;
   }
 
   .phone-input select {
     width: 80px;
+    flex-shrink: 0;
+  }
+
+  .phone-input input {
+    flex: 1;
+    width: 100%;
   }
 
   /* =========================
