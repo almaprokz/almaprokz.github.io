@@ -1969,7 +1969,13 @@ category-card:active {
      UPLOAD
   ========================= */
   .upload-box {
-    padding: 30px 20px;
+    width: 100%;
+    max-width: 100%;
+
+    padding: 24px;            /* 🔥 reduce from 50px */
+    box-sizing: border-box;   /* 🔥 CRITICAL */
+
+    margin: 0;                /* remove auto centering issues */
   }
 
   .upload-content p {
