@@ -251,27 +251,33 @@ padding:80px 0;
 background:#ffffff;
 }
 
-.standard-inner {
-  max-width: 600px;
-  margin: 0 auto;
+.standard-inner{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+gap:80px;
 }
 
-.standard-text {
-  max-width: 520px;
+.standard-text h2{
+margin-bottom:10px;
 }
 
-.standard-text p {
-  margin-bottom: 16px;
-  line-height: 1.6;
+.standard-text p{
+color:#555;
 }
 
-.standard-list {
-  padding-left: 18px;
+.standard-list{
+border-left:3px solid #e5e7eb;
+padding-left:30px;
 }
 
-.standard-list li {
-  margin-bottom: 8px;
-  line-height: 1.5;
+.standard-list ul{
+list-style:none;
+padding:0;
+}
+
+.standard-list li{
+margin-bottom:12px;
 }
 
 .professionals{
