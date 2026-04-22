@@ -255,7 +255,7 @@ background:#ffffff;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 60px;
+  gap: 100px; /* 🔥 more breathing space */
 }
 
 .standard-left {
@@ -266,14 +266,15 @@ background:#ffffff;
   flex: 1;
 }
 
+/* LIST + DIVIDER */
 .standard-list {
-  border-left: 2px solid #2b5fb8;
-  padding-left: 20px;
+  border-left: 2px solid #e5e7eb; /* 🔥 light grey */
+  padding-left: 28px;             /* 🔥 more space after line */
 }
 
 .standard-list li {
-  margin-bottom: 12px;
-  line-height: 1.5;
+  margin-bottom: 16px; /* 🔥 more vertical spacing */
+  line-height: 1.6;
 }
 
 .professionals{
@@ -1373,7 +1374,7 @@ category-card:active {
   /* ✅ STANDARD SECTION (CRITICAL FIX) */
   .standard-inner {
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
   }
 
   .standard-list {
@@ -1382,7 +1383,7 @@ category-card:active {
     padding-left: 0;
     padding-top: 20px;
   }
-
+  
   /* ✅ PROFESSIONALS */
   .professionals p {
     max-width: 100%;
