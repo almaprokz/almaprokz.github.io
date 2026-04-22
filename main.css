@@ -2014,7 +2014,7 @@ category-card:active {
 .header-right {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 16px; /* 🔥 increase this */
 }
 
 /* container */
@@ -2059,7 +2059,7 @@ category-card:active {
 /* MOBILE */
 @media (max-width: 768px) {
   .header-right {
-    gap: 6px;
+    gap: 10px;
   }
 
   .lang-switch a {
