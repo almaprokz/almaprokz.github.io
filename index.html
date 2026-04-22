@@ -288,15 +288,17 @@ function setLang(lang) {
     }
   });
 
-const savedLang = localStorage.getItem("lang") || "en";
-setLang(savedLang);
-
   // highlight active language
   document.getElementById("lang-en")?.classList.remove("active");
   document.getElementById("lang-ru")?.classList.remove("active");
 
   document.getElementById("lang-" + lang)?.classList.add("active");
 }
+
+// ✅ THIS MUST BE OUTSIDE THE FUNCTION
+const savedLang = localStorage.getItem("lang") || "en";
+setLang(savedLang);
+
 </script>
 </body>
 </html>
