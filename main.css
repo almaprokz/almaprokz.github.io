@@ -251,33 +251,29 @@ padding:80px 0;
 background:#ffffff;
 }
 
-.standard-inner{
-display:flex;
-justify-content:space-between;
-align-items:flex-start;
-gap:80px;
+.standard-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
 }
 
-.standard-text h2{
-margin-bottom:10px;
+.standard-left {
+  max-width: 420px;
 }
 
-.standard-text p{
-color:#555;
+.standard-right {
+  flex: 1;
 }
 
-.standard-list{
-border-left:3px solid #e5e7eb;
-padding-left:30px;
+.standard-list {
+  border-left: 2px solid #2b5fb8;
+  padding-left: 20px;
 }
 
-.standard-list ul{
-list-style:none;
-padding:0;
-}
-
-.standard-list li{
-margin-bottom:12px;
+.standard-list li {
+  margin-bottom: 12px;
+  line-height: 1.5;
 }
 
 .professionals{
