@@ -2008,3 +2008,48 @@ category-card:active {
   }
 
 }
+
+/*language change button*/
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 6px;
+  margin-right: 10px;
+}
+
+.lang-switch button {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.lang-switch button:hover {
+  border-color: #2b5fb8;
+  color: #2b5fb8;
+}
+
+.lang-switch button.active {
+  border-color: #2b5fb8;
+  background: #eef2ff;
+  color: #2b5fb8;
+}
+
+/*Lang change mobile*/
+@media (max-width: 768px) {
+  .lang-switch {
+    margin-right: 8px;
+  }
+
+  .lang-switch button {
+    padding: 3px 6px;
+    font-size: 11px;
+  }
+}

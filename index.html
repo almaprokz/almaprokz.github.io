@@ -21,6 +21,11 @@
       </a>
     </div>
 
+    <div class="lang-switch">
+  <button onclick="setLang('en')" id="lang-en">EN</button>
+  <button onclick="setLang('ru')" id="lang-ru">RU</button>
+</div>
+
     <div class="menu" id="openMenu">☰</div>
     <!-- OVERLAY -->
 <div class="nav-overlay" id="navOverlay"></div>
@@ -282,10 +287,16 @@ function setLang(lang) {
       el.innerText = translations[lang][key];
     }
   });
-}
 
 const savedLang = localStorage.getItem("lang") || "en";
 setLang(savedLang);
+
+  // highlight active language
+  document.getElementById("lang-en")?.classList.remove("active");
+  document.getElementById("lang-ru")?.classList.remove("active");
+
+  document.getElementById("lang-" + lang)?.classList.add("active");
+}
 </script>
 </body>
 </html>
