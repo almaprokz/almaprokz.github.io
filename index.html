@@ -22,8 +22,8 @@
     </div>
 
     <div class="lang-switch">
-  <button onclick="setLang('en')" id="lang-en">EN</button>
-  <button onclick="setLang('ru')" id="lang-ru">RU</button>
+<a href="index.html" class="active">EN</a>
+  <a href="index-ru.html">RU</a>
 </div>
 
     <div class="menu" id="openMenu">☰</div>
@@ -55,31 +55,31 @@
 
 <div class="hero-text">
 
-  <h1 data-lang="hero_title">
+  <h1>
     Verified Professionals in Almaty
   </h1>
 
-  <p data-lang="hero_subtitle">
+  <p>
     Carefully selected specialists you can trust.
   </p>
 
-  <ul class="hero-list">
-    <li data-lang="hero_list_1">Verified professionals</li>
-    <li data-lang="hero_list_2">Direct contact</li>
-    <li data-lang="hero_list_3">Curated listings</li>
+  <ul>
+    <li>Verified professionals</li>
+    <li">Direct contact</li>
+    <li>Curated listings</li>
   </ul>
 
   <div class="hero-buttons">
-    <a href="#categories" class="btn btn-primary" data-lang="hero_btn_find">
+    <a href="#categories" class="btn btn-primary">
       Find a Specialist
     </a>
 
-    <a href="apply.html" class="btn btn-secondary" data-lang="hero_btn_apply">
+    <a href="apply.html" class="btn btn-secondary">
       Apply for Listing
     </a>
   </div>
 
-  <p class="hero-note" data-lang="hero_note">
+  <p class="hero-note">
     Applications are reviewed individually.
   </p>
 
@@ -98,35 +98,35 @@
 
 <a href="nannies.html" class="category-card">
 
-  <h3 data-lang="cat_nannies_title">Nannies</h3>
+  <h3>Nannies</h3>
 
-  <p data-lang="cat_nannies_desc">
+  <p>
     English-speaking caregivers and experienced child specialists.
   </p>
 
-  <span class="card-link" data-lang="view_specialists">
+  <span class="card-link">
     View Specialists →
   </span>
 
 </a>
 
 <a href="home-services.html" class="category-card">
-  <h3 data-lang="cat_home_services_title">Home Services</h3>
-  <p data-lang="cat_home_services_desc">
+  <h3>Home Services</h3>
+  <p>
     Verified electricians, plumbers and renovation professionals.
   </p>
-  <span class="coming" data-lang="coming_soon">
+  <span class="coming">
     Coming soon
   </span>
 </a>
 
 
 <a href="digital-specialists.html" class="category-card">
-  <h3 data-lang="cat_digital_specialists_title">Digital Specialists</h3>
-  <p data-lang="cat_digital_specialists_desc">
+  <h3>Digital Specialists</h3>
+  <p>
     Designers, developers and marketing professionals.
   </p>
-  <span class="coming" data-lang="coming_soon">
+  <span class="coming">
     Coming soon
   </span>
 </a>
@@ -142,15 +142,15 @@
 <div class="container standard-inner">
 
 <div class="standard-text">
-<h2 data-lang="standard_title">Our Standard</h2>
-<p data-lang="standard_desc">
+<h2>Our Standard</h2>
+<p>
   Selection based on experience and reliability.
 </p>
 
-<li data-lang="standard_1">Identity verification</li>
-<li data-lang="standard_2">Experience and portfolio review</li>
-<li data-lang="standard_3">Limited listings per category</li>
-<li data-lang="standard_4">Ongoing quality monitoring</li>
+<li>Identity verification</li>
+<li>Experience and portfolio review</li>
+<li>Limited listings per category</li>
+<li>Ongoing quality monitoring</li>
 </ul>
 </div>
 
@@ -162,13 +162,13 @@
 
 <div class="container">
 
-<h2 data-lang="pro_title">For Professionals</h2>
+<h2>For Professionals</h2>
 
-<p data-lang="pro_desc">
+<p>
   AlmaPro is a curated platform for verified professionals in Almaty...
 </p>
 
-<a href="apply.html" class="btn btn-primary" data-lang="pro_btn">
+<a href="apply.html" class="btn btn-primary">
   Apply for Consideration
 </a>
 
@@ -187,29 +187,29 @@
 
   <p>
     <a href="index.html" class="footer-link-text">
-      <span data-lang="footer_tagline_1">Curated professionals</span><br>
-      <span data-lang="footer_tagline_2">in Almaty.</span>
+      <span>Curated professionals</span><br>
+      <span>in Almaty.</span>
     </a>
   </p>
 </div>
 
 <!-- RIGHT -->
 <div class="footer-right">
-  <p class="footer-title" data-lang="footer_explore">Explore</p>
+  <p class="footer-title">Explore</p>
 
-  <a href="nannies.html" data-lang="footer_categories">
+  <a href="nannies.html">
     Explore by Categories
   </a>
 
-  <a href="index.html" data-lang="footer_standards">
+  <a href="index.html">
     Our Standards
   </a>
 
-  <a href="apply.html" data-lang="footer_professionals">
+  <a href="apply.html">
     For Professionals
   </a>
 
-  <a href="contact.html" data-lang="footer_contact">
+  <a href="contact.html">
     Contact
   </a>
 </div>
@@ -253,52 +253,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-<script>
-const translations = {
-  en: {
-    footer_tagline_1: "Curated professionals",
-    footer_tagline_2: "in Almaty.",
-
-    footer_explore: "Explore",
-    footer_categories: "Explore by Categories",
-    footer_standards: "Our Standards",
-    footer_professionals: "For Professionals",
-    footer_contact: "Contact"
-  },
-
-  ru: {
-    footer_tagline_1: "Отобранные специалисты",
-    footer_tagline_2: "в Алматы.",
-
-    footer_explore: "Навигация",
-    footer_categories: "Категории",
-    footer_standards: "Наш стандарт",
-    footer_professionals: "Для специалистов",
-    footer_contact: "Контакты"
-  }
-};
-
-function setLang(lang) {
-  localStorage.setItem("lang", lang);
-
-  document.querySelectorAll("[data-lang]").forEach(el => {
-    const key = el.getAttribute("data-lang");
-    if (translations[lang][key]) {
-      el.innerText = translations[lang][key];
-    }
-  });
-
-  // highlight active language
-  document.getElementById("lang-en")?.classList.remove("active");
-  document.getElementById("lang-ru")?.classList.remove("active");
-
-  document.getElementById("lang-" + lang)?.classList.add("active");
-}
-
-// ✅ THIS MUST BE OUTSIDE THE FUNCTION
-const savedLang = localStorage.getItem("lang") || "en";
-setLang(savedLang);
-
-</script>
 </body>
 </html>

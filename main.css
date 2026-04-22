@@ -2010,46 +2010,62 @@ category-card:active {
 }
 
 /*language change button*/
+/* LANGUAGE SWITCH (CLEAN FINAL VERSION) */
+
 .header-right {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
+/* container */
 .lang-switch {
   display: flex;
-  gap: 6px;
-  margin-right: 10px;
+  align-items: center;
+  gap: 4px;
 }
 
-.lang-switch button {
-  background: none;
-  border: 1px solid #ddd;
-  padding: 4px 8px;
+/* links instead of buttons */
+.lang-switch a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 28px;
+  padding: 0 10px;
+
   font-size: 12px;
-  cursor: pointer;
-  border-radius: 4px;
+  text-decoration: none;
+
+  color: #444;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+
   transition: all 0.2s ease;
 }
 
-.lang-switch button:hover {
+/* hover */
+.lang-switch a:hover {
   border-color: #2b5fb8;
   color: #2b5fb8;
 }
 
-.lang-switch button.active {
+/* active language */
+.lang-switch a.active {
   border-color: #2b5fb8;
   background: #eef2ff;
   color: #2b5fb8;
 }
 
-/*Lang change mobile*/
+/* MOBILE */
 @media (max-width: 768px) {
-  .lang-switch {
-    margin-right: 8px;
+  .header-right {
+    gap: 6px;
   }
 
-  .lang-switch button {
-    padding: 3px 6px;
+  .lang-switch a {
+    height: 24px;
+    padding: 0 8px;
     font-size: 11px;
   }
 }
