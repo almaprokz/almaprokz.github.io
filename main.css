@@ -143,6 +143,8 @@ margin-bottom:8px;
 .btn-primary {
   background: #2b5fb8;
   color: #fff;
+  box-sizing: border-box; /* 🔥 CRITICAL */
+  border: 1px solid transparent; /* 🔥 balances height */
 }
 
 .btn-primary:hover {
@@ -155,6 +157,7 @@ margin-bottom:8px;
   background: #fff;
   border: 1px solid #d1d5db;
   color: #111;
+  box-sizing: border-box; /* 🔥 CRITICAL */
 }
 .btn-secondary:hover {
   background: #f3f4f6;
