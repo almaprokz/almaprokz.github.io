@@ -115,21 +115,27 @@ margin-bottom:8px;
 }
 
 .hero-buttons {
-  margin-top: 40px;
-  align-items: center;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 /* BASE */
 .btn {
   display: inline-flex;
   align-items: center;
-  padding: 0 22px;     /* 🔥 remove vertical padding */
-  height: 48px;        /* 🔥 force equal height */
-  border-radius: 6px;
+  justify-content: center;
+
+  height: 48px;
+  padding: 0 20px;
+
+  min-width: 220px; /* 🔥 KEY */
+  text-align: center;
+
+  border-radius: 8px;
   font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  box-sizing: border-box;
+
+  white-space: nowrap;
 }
 
 /* PRIMARY */
@@ -2069,4 +2075,12 @@ category-card:active {
     padding: 0 8px;
     font-size: 11px;
   }
+}
+
+
+/*Russian page disabled links*/
+.card-link.disabled {
+  color: #9ca3af;
+  cursor: default;
+  text-decoration: none;
 }
