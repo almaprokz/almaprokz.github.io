@@ -117,8 +117,14 @@ margin-bottom:8px;
 .hero-buttons {
   display: flex;
   gap: 16px;
+  align-items: stretch; /* 🔥 IMPORTANT */
+}
+
+.hero-buttons a,
+.hero-buttons button {
+  display: inline-flex;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* BASE BUTTON */
@@ -128,14 +134,14 @@ margin-bottom:8px;
   justify-content: center;
 
   height: 48px;
-  padding: 0 20px;
-
   min-width: 220px;
+
+  padding: 0 20px;
   border-radius: 8px;
 
   font-size: 15px;
-  text-decoration: none;
-  white-space: nowrap;
+  line-height: 1; /* 🔥 CRITICAL */
+  box-sizing: border-box;
 }
 
 /* PRIMARY */
@@ -151,9 +157,8 @@ margin-bottom:8px;
 
 /* SECONDARY */
 .btn-secondary {
-  background: #fff;
   border: 1px solid #d1d5db;
-  color: #111;
+  height: 48px; /* 🔥 force same height */
 }
 
 .btn-secondary:hover {
