@@ -117,8 +117,12 @@ margin-bottom:8px;
 .hero-buttons {
   display: flex;
   gap: 16px;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items: stretch; /* 🔥 KEY FIX */
+}
+
+.hero-buttons .btn {
+  height: 48px;
+  display: flex; /* 🔥 ensures full stretch */
 }
 
 /* BASE BUTTON */
