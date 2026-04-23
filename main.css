@@ -117,10 +117,11 @@ margin-bottom:8px;
 .hero-buttons {
   display: flex;
   gap: 16px;
+  align-items: center;
   flex-wrap: wrap;
 }
 
-/* BASE */
+/* BASE BUTTON */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -129,20 +130,18 @@ margin-bottom:8px;
   height: 48px;
   padding: 0 20px;
 
-  min-width: 220px; /* 🔥 KEY */
-  text-align: center;
-
+  min-width: 220px;
   border-radius: 8px;
-  font-size: 15px;
 
+  font-size: 15px;
+  text-decoration: none;
   white-space: nowrap;
 }
 
 /* PRIMARY */
 .btn-primary {
   background: #2b5fb8;
-  color: white;
-  border: 1px solid transparent;
+  color: #fff;
 }
 
 .btn-primary:hover {
@@ -150,19 +149,11 @@ margin-bottom:8px;
   transform: translateY(-2px);
 }
 
-.hero-buttons a {
-  margin-right: 40px;
-}
-
-.hero-buttons a:last-child {
-  margin-right: 0;
-}
-
 /* SECONDARY */
 .btn-secondary {
-  background: white;
-  color: #222;
-  border: 1px solid #ccc;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  color: #111;
 }
 
 .btn-secondary:hover {
