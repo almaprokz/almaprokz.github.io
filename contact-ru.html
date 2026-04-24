@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlmaPro</title>
+
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/almapro-logo.svg" alt="AlmaPro">
+      </a>
+    </div>
+
+    <div class="header-right">
+
+    <div class="lang-switch">
+<a href="contact.html">EN</a>
+  <a href="contact-ru.html" class="active">RU</a>
+</div>
+
+ <div class="menu" id="openMenu">☰</div>
+
+  </div>
+
+</div>
+
+    <!-- OVERLAY -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- SIDE MENU -->
+<div class="side-menu" id="sideMenu">
+  <div class="menu-header">
+    <span class="close-btn" id="closeMenu">✕</span>
+  </div>
+
+<nav class="menu-links">
+  <a href="index-ru.html">Главная</a>
+  <a href="nannies-ru.html">Найти специалиста</a>
+  <a href="apply-ru.html">Для специалистов</a>
+  <a href="contact-ru.html">Контакты</a>
+</nav>
+</div>
+
+  </div>
+</header>
+
+<section class="contact-hero">
+  <div class="container">
+
+    <h1>Связаться с AlmaPro</h1>
+
+    <p class="contact-sub">
+       Если у вас есть вопросы о подборе специалиста или работе платформы —
+        напишите нам.
+    </p>
+
+    <p class="contact-note">
+       Обычно мы отвечаем в течение 24 часов.
+    </p>
+
+    <ul class="contact-list">
+      <li>✔ Живая поддержка</li>
+      <li>✔ Прямой контакт со специалистами</li>
+      <li>✔ Проверенные профили</li>
+    </ul>
+
+  </div>
+</section>
+
+<section class="contact-options">
+  <div class="container contact-grid">
+
+    <div class="contact-card">
+      <h3>Поддержка WhatsApp</h3>
+      <p>Быстрые вопросы по специалистам или платформе</p>
+
+      <div class="card-divider"></div>
+
+      <a href="#" class="contact-link">Связаться через WhatsApp →</a>
+    </div>
+
+    <div class="contact-card">
+      <h3>Email поддержка</h3>
+      <p>Общие вопросы и сотрудничество</p>
+
+      <div class="card-divider"></div>
+
+      <a href="mailto:almapro.contact@proton.me" class="contact-link">
+        support@almapro.kz →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact-form">
+  <div class="container form-wrapper">
+
+    <h2>Отправить сообщение</h2>
+
+   <form action="https://formspree.io/f/mpqynwgp" method="POST">
+
+  <div class="form-block">
+    <input type="text" name="name" placeholder="Имя" required>
+  </div>
+
+  <div class="form-block">
+    <input type="email" name="email" placeholder="Email" required>
+  </div>
+
+  <div class="form-block">
+    <textarea name="message" placeholder="Сообщение" required></textarea>
+  </div>
+
+  <input type="hidden" name="_subject" value="New Contact Message - AlmaPro">
+
+  <p class="form-note">
+    Мы читаем все сообщения и отвечаем в течение 24 часов.
+  </p>
+
+  <button type="submit" class="btn-primary">Отправить сообщение</button>
+
+</form>
+  </div>
+
+  <!-- SUCCESS MESSAGE -->
+  <div class="success-message" id="contactSuccess">
+    <div class="success-box">
+      <div class="success-icon">✔</div>
+      <h2>Сообщение отправлено</h2>
+      <p>Мы свяжемся с вами в ближайшее время.</p>
+      <a href="index.html" class="btn-primary">Вернуться на главную</a>
+    </div>
+  </div>
+
+</section>
+
+<!--footer-->
+<footer class="footer">
+  <div class="container footer-inner">
+
+    <!-- LEFT -->
+    <div class="footer-left">
+  <a href="index.html">
+    <img src="images/almapro-logo-white.svg" class="footer-logo">
+  </a>
+
+  <p>
+    <a href="index.html" class="footer-link-text">
+      <p>
+Отобранные специалисты<br>в Алматы.
+</p>
+    </a>
+  </p>
+</div>
+
+<!-- RIGHT -->
+<div class="footer-right">
+  <p class="footer-title">Навигация</p>
+
+<a href="nannies-ru.html">Категории</a>
+<a href="index-ru.html">Наш стандарт</a>
+<a href="apply-ru.html">Для специалистов</a>
+<a href="contact-ru.html">Контакты</a>
+</div>
+
+</div>
+
+  <div class="footer-bottom container">
+    <div class="footer-line"></div>
+    <p>© 2026 AlmaPro. All rights reserved.</p>
+  </div>
+
+</footer>
+
+
+<script>
+window.addEventListener("scroll", function() {
+  const header = document.querySelector(".header");
+
+  if (window.scrollY > 50) {
+    header.classList.add("shrink");
+  } else {
+    header.classList.remove("shrink");
+  }
+});
+</script>
+
+<!--Navigation-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const openBtn = document.getElementById("openMenu");
+  const closeBtn = document.getElementById("closeMenu");
+  const menu = document.getElementById("sideMenu");
+  const overlay = document.getElementById("navOverlay");
+
+  openBtn.addEventListener("click", () => {
+    menu.classList.add("active");
+    overlay.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+
+  function closeMenu() {
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+  }
+});
+</script>
+
+</body>
+</html>
