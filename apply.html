@@ -153,8 +153,9 @@
 <input type="hidden" name="photo_url" id="photoUrl">
 </div>
 
+       <form id="applyForm" action="https://formspree.io/f/abcdwxyz" method="POST">
+
        <input type="hidden" name="_subject" value="New Application - AlmaPro">
-<input type="hidden" name="_next" value="https://almapro.kz/success.html">
 
 <!-- SUBMIT -->
 <button type="submit" class="btn btn-primary">Submit for Review</button>
@@ -202,37 +203,26 @@
 </footer>
 
 <script>
-// ===== FORM VALIDATION (SAFE WITH FORMSPREE) =====
+const form = document.getElementById("applyForm");
 
-document.addEventListener("DOMContentLoaded", () => {
+form.addEventListener("submit", async function(e) {
+  e.preventDefault();
 
-  const form = document.querySelector("form");
+  const data = new FormData(form);
 
-  if (!form) return;
-
-  const inputs = form.querySelectorAll("input[required], textarea[required]");
-
-  form.addEventListener("submit", (e) => {
-
-    let valid = true;
-
-    inputs.forEach(input => {
-      if (input.value.trim() === "") {
-        input.style.borderColor = "red";
-        valid = false;
-      } else {
-        input.style.borderColor = "#ddd";
-      }
-    });
-
-    if (!valid) {
-      e.preventDefault(); // stop submission
-      alert("Please fill all required fields");
+  const response = await fetch(form.action, {
+    method: "POST",
+    body: data,
+    headers: {
+      'Accept': 'application/json'
     }
-
-    // If valid → Formspree continues normally
   });
 
+  if (response.ok) {
+    window.location.href = "https://almapro.kz/success.html";
+  } else {
+    alert("Something went wrong. Try again.");
+  }
 });
 </script>
 
