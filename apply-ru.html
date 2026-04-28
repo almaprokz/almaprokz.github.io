@@ -209,14 +209,14 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  console.log("FORM SCRIPT RUNNING");
-
   const form = document.getElementById("applyForm");
 
   if (!form) {
-  console.log("FORM NOT FOUND");
-  return;
-}
+    console.log("FORM NOT FOUND (this page has no form)");
+    return;
+  }
+
+  console.log("FORM FOUND ✅");
 
   form.addEventListener("submit", async function(e) {
     e.preventDefault();
@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (response.ok) {
       window.location.href = "https://almapro.kz/success-ru.html";
     } else {
-      alert("Something went wrong. Try again.");
+      alert("Something went wrong.");
     }
   });
 
