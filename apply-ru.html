@@ -67,8 +67,8 @@
 
     <div class="form-inner">
 
-      <form action="https://formspree.io/f/mgonqoye" method="POST">
-        <input type="hidden" name="_next" value="success.html">
+      <form action="https://hook.us2.make.com/3hrunneea1o2ublenxuwa3zp6x5nhg06" method="POST">
+        <input type="hidden" name="_next" value="success-ru.html">
 
         <!-- BASIC -->
         <div class="form-block">
@@ -228,15 +228,22 @@ window.addEventListener("load", function () {
 
     const data = new FormData(form);
 
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data
+      });
 
-    if (response.ok) {
-      window.location.href = "https://almapro.kz/success-ru.html";
-    } else {
+      console.log("RESPONSE STATUS:", response.status); // 🔍 debug
+
+      if (response.ok) {
+        window.location.href = "https://almapro.kz/success-ru.html";
+      } else {
+        throw new Error("Request failed");
+      }
+
+    } catch (error) {
+      console.error("ERROR:", error);
       alert("Something went wrong.");
       if (submitBtn) submitBtn.disabled = false;
     }
@@ -244,6 +251,8 @@ window.addEventListener("load", function () {
 
 });
 </script>
+
+
 <script>
 window.addEventListener("scroll", function() {
   const header = document.querySelector(".header");

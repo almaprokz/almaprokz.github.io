@@ -67,7 +67,7 @@
 
     <div class="form-inner">
 
-      <form action="https://formspree.io/f/mgonqoye" method="POST">
+      <form action="https://hook.us2.make.com/3hrunneea1o2ublenxuwa3zp6x5nhg06" method="POST">
         <input type="hidden" name="_next" value="success.html">
 
         <!-- BASIC -->
@@ -224,15 +224,22 @@ window.addEventListener("load", function () {
 
     const data = new FormData(form);
 
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data
+      });
 
-    if (response.ok) {
-      window.location.href = "https://almapro.kz/success.html";
-    } else {
+      console.log("RESPONSE STATUS:", response.status); // 🔍 debug
+
+      if (response.ok) {
+        window.location.href = "https://almapro.kz/success.html";
+      } else {
+        throw new Error("Request failed");
+      }
+
+    } catch (error) {
+      console.error("ERROR:", error);
       alert("Something went wrong.");
       if (submitBtn) submitBtn.disabled = false;
     }
