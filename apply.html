@@ -348,12 +348,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.getElementById("sideMenu");
   const overlay = document.getElementById("navOverlay");
 
+  if (!openBtn || !menu || !overlay) return; // 🔥 prevents crash
+
   openBtn.addEventListener("click", () => {
     menu.classList.add("active");
     overlay.classList.add("active");
   });
 
-  closeBtn.addEventListener("click", closeMenu);
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeMenu);
+  }
+
   overlay.addEventListener("click", closeMenu);
 
   function closeMenu() {
