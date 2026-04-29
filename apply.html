@@ -211,8 +211,9 @@
 <script>
 window.addEventListener("load", function () {
 
-  const form = document.querySelector("#applyForm");
+  console.log("FORM HANDLER ACTIVE"); // 🔍 debug
 
+  const form = document.querySelector("#applyForm");
   if (!form) return;
 
   form.addEventListener("submit", async function(e) {
@@ -233,12 +234,12 @@ window.addEventListener("load", function () {
     try {
       const response = await fetch(form.action, {
         method: "POST",
-        body: data,
-        headers: { 'Accept': 'application/json' }
+        body: data
       });
 
       if (response.ok) {
-        window.location.href = "https://almapro.kz/success.html";
+        // 🔥 THIS IS THE IMPORTANT CHANGE
+        window.location.replace("https://almapro.kz/success.html");
       } else {
         alert("Something went wrong. Try again.");
         if (submitBtn) submitBtn.disabled = false;
