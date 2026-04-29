@@ -137,20 +137,26 @@
     <div class="form-block">
   <h3>Фото профиля</h3>
 
-    <label class="upload-box">
-  <input type="file" id="photoInput" accept="image/*">
+     <label class="upload-box">
 
-  <div class="upload-content" id="uploadContent">
-    <div class="upload-icon">📷</div>
-    <p>Загрузить фото</p>
-    <span>JPG, PNG | чистое профессиональное фото</span>
-  </div>
+    <!-- FILE INPUT -->
+    <input type="file" id="photoInput" accept="image/*">
 
-  <!-- image preview -->
-  <img id="previewImage" style="display:none;" />
-</label>
+    <!-- UPLOAD UI -->
+    <div class="upload-content" id="uploadContent">
+      <div class="upload-icon">📷</div>
+      <p>Загрузить фото</p>
+      <span>JPG, PNG | чистое профессиональное фото</span>
+    </div>
 
-<input type="hidden" name="photo_url" id="photoUrl">
+    <!-- IMAGE PREVIEW -->
+    <img id="previewImage" alt="Preview" />
+
+  </label>
+
+  <!-- HIDDEN INPUT (VERY IMPORTANT) -->
+  <input type="hidden" name="photo_url" id="photoUrl">
+
 </div>
 
        <form id="applyForm" action="https://hook.us2.make.com/3hrunneea1o2ublenxuwa3zp6x5nhg06" method="POST">
@@ -209,16 +215,9 @@
 <script>
 window.addEventListener("load", function () {
 
-  console.log("PAGE FULLY LOADED");
+  const form = document.querySelector("#applyForm");
 
-  const form = document.querySelector("#applyForm") || document.querySelector("form");
-
-  if (!form) {
-    console.log("FORM NOT FOUND");
-    return;
-  }
-
-  console.log("FORM FOUND ✅");
+  if (!form) return;
 
   form.addEventListener("submit", async function(e) {
     e.preventDefault();
@@ -226,27 +225,34 @@ window.addEventListener("load", function () {
     const submitBtn = form.querySelector("button[type='submit']");
     if (submitBtn) submitBtn.disabled = true;
 
+    // 🚫 Block if upload not finished
+    if (window.uploadFinished && !window.uploadFinished()) {
+      alert("Please wait for photo upload to finish 📸");
+      if (submitBtn) submitBtn.disabled = false;
+      return;
+    }
+
     const data = new FormData(form);
 
     try {
       const response = await fetch(form.action, {
         method: "POST",
-        body: data
+        body: data,
+        headers: { 'Accept': 'application/json' }
       });
-
-      console.log("RESPONSE STATUS:", response.status); // 🔍 debug
 
       if (response.ok) {
         window.location.href = "https://almapro.kz/success-ru.html";
       } else {
-        throw new Error("Request failed");
+        alert("Something went wrong. Try again.");
+        if (submitBtn) submitBtn.disabled = false;
       }
 
-    } catch (error) {
-      console.error("ERROR:", error);
-      alert("Something went wrong.");
+    } catch (err) {
+      alert("Network error. Try again.");
       if (submitBtn) submitBtn.disabled = false;
     }
+
   });
 
 });
@@ -315,23 +321,31 @@ document.addEventListener("DOMContentLoaded", () => {
   const previewImage = document.getElementById("previewImage");
   const uploadContent = document.getElementById("uploadContent");
 
+  let uploadFinished = false;
+
   if (!fileInput) return;
 
   fileInput.addEventListener("change", async () => {
 
+    uploadFinished = false;
+
     const file = fileInput.files[0];
     if (!file) return;
 
-    // 🔥 SHOW PREVIEW IMMEDIATELY
+    // 🔹 Show preview immediately
     const reader = new FileReader();
     reader.onload = function(e) {
-      previewImage.src = e.target.result;
-      previewImage.style.display = "block";
-      uploadContent.style.display = "none";
+      if (previewImage) {
+        previewImage.src = e.target.result;
+        previewImage.style.display = "block";
+      }
+      if (uploadContent) {
+        uploadContent.style.display = "none";
+      }
     };
     reader.readAsDataURL(file);
 
-    // 🔥 UPLOAD TO CLOUDINARY
+    // 🔹 Upload to Cloudinary
     const formData = new FormData();
     formData.append("file", file);
     formData.append("upload_preset", "almapro_upload");
@@ -344,14 +358,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const data = await res.json();
 
-      // save URL for Formspree
+      // Save URL for Formspree
       photoUrlInput.value = data.secure_url;
+
+      uploadFinished = true; // ✅ upload complete
 
     } catch (err) {
       alert("Upload failed ❌");
     }
 
   });
+
+  // Make uploadFinished available globally
+  window.uploadFinished = () => uploadFinished;
 
 });
 </script>
