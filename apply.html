@@ -219,12 +219,9 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // 🔥 HARD BLOCK native submit
-  form.onsubmit = null;
-
   form.addEventListener("submit", async function(e) {
     e.preventDefault();
-    e.stopPropagation(); // 🔥 important
+    e.stopImmediatePropagation(); // 🔥 stronger than stopPropagation
 
     console.log("SUBMIT INTERCEPTED");
 
@@ -245,14 +242,12 @@ document.addEventListener("DOMContentLoaded", () => {
         body: data
       });
 
-      // 🔥 FORCE redirect no matter what
       window.location.replace("https://almapro.kz/success.html");
 
     } catch (err) {
       alert("Network error");
       if (submitBtn) submitBtn.disabled = false;
     }
-
   });
 
 });
