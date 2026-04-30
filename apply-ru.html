@@ -213,22 +213,30 @@
 </footer>
 
 <script>
-window.addEventListener("load", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-  console.log("FORM HANDLER ACTIVE"); // 🔍 debug
+  console.log("FORM HANDLER ACTIVE");
 
-  const form = document.querySelector("#applyForm");
-  if (!form) return;
+  const form = document.getElementById("applyForm");
+  if (!form) {
+    console.log("FORM NOT FOUND");
+    return;
+  }
+
+  // 🔥 HARD BLOCK native submit
+  form.onsubmit = null;
 
   form.addEventListener("submit", async function(e) {
     e.preventDefault();
+    e.stopPropagation(); // 🔥 important
+
+    console.log("SUBMIT INTERCEPTED");
 
     const submitBtn = form.querySelector("button[type='submit']");
     if (submitBtn) submitBtn.disabled = true;
 
-    // 🚫 Block if upload not finished
     if (window.uploadFinished && !window.uploadFinished()) {
-      alert("Please wait for photo upload to finish 📸");
+      alert("Wait for photo upload 📸");
       if (submitBtn) submitBtn.disabled = false;
       return;
     }
@@ -236,21 +244,16 @@ window.addEventListener("load", function () {
     const data = new FormData(form);
 
     try {
-      const response = await fetch(form.action, {
+      await fetch(form.action, {
         method: "POST",
         body: data
       });
 
-      if (response.ok) {
-        // 🔥 THIS IS THE IMPORTANT CHANGE
-        window.location.replace("https://almapro.kz/success-ru.html");
-      } else {
-        alert("Something went wrong. Try again.");
-        if (submitBtn) submitBtn.disabled = false;
-      }
+      // 🔥 FORCE redirect no matter what
+      window.location.replace("https://almapro.kz/success-ru.html");
 
     } catch (err) {
-      alert("Network error. Try again.");
+      alert("Network error");
       if (submitBtn) submitBtn.disabled = false;
     }
 
