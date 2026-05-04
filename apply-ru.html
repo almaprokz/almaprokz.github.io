@@ -155,13 +155,14 @@
   </label>
 
   <!-- HIDDEN INPUT (VERY IMPORTANT) -->
-  <input type="hidden" name="photo_url" id="photoUrl">
+    <input type="file" name="photo">
 
 </div>
 
-       <form id="applyForm" action="https://hook.us2.make.com/3hrunneea1o2ublenxuwa3zp6x5nhg06" method="POST">
+       <form action="https://formsubmit.co/almapro.contact@proton.me" method="POST" enctype="multipart/form-data">
 
-       <input type="hidden" name="_subject" value="New Application - AlmaPro">
+  <input type="hidden" name="_subject" value="New Application - AlmaPro">
+  <input type="hidden" name="_next" value="https://almapro.kz/success-ru.html">
 
 <!-- SUBMIT -->
 <button type="submit" class="btn btn-primary">Submit for Review</button>
@@ -211,51 +212,6 @@
   </div>
 
 </footer>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  console.log("FORM HANDLER ACTIVE");
-
-  const form = document.getElementById("applyForm");
-  if (!form) {
-    console.log("FORM NOT FOUND");
-    return;
-  }
-
-  form.addEventListener("submit", async function(e) {
-    e.preventDefault();
-    e.stopImmediatePropagation(); // 🔥 stronger than stopPropagation
-
-    console.log("SUBMIT INTERCEPTED");
-
-    const submitBtn = form.querySelector("button[type='submit']");
-    if (submitBtn) submitBtn.disabled = true;
-
-    if (window.uploadFinished && !window.uploadFinished()) {
-      alert("Wait for photo upload 📸");
-      if (submitBtn) submitBtn.disabled = false;
-      return;
-    }
-
-    const data = new FormData(form);
-
-    try {
-      await fetch(form.action, {
-        method: "POST",
-        body: data
-      });
-
-      window.location.replace("https://almapro.kz/success-ru.html");
-
-    } catch (err) {
-      alert("Network error");
-      if (submitBtn) submitBtn.disabled = false;
-    }
-  });
-
-});
-</script>
 
 
 <script>
