@@ -155,7 +155,7 @@
   </label>
 
   <!-- HIDDEN INPUT (VERY IMPORTANT) -->
-  <input type="file" name="photo">
+  <input type="file" name="photo" required>
 
 </div>
 
@@ -260,68 +260,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
   });
-
-});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  const fileInput = document.getElementById("photoInput");
-  const photoUrlInput = document.getElementById("photoUrl");
-  const previewImage = document.getElementById("previewImage");
-  const uploadContent = document.getElementById("uploadContent");
-
-  let uploadFinished = false;
-
-  if (!fileInput) return;
-
-  fileInput.addEventListener("change", async () => {
-
-    uploadFinished = false;
-
-    const file = fileInput.files[0];
-    if (!file) return;
-
-    // 🔹 Show preview immediately
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      if (previewImage) {
-        previewImage.src = e.target.result;
-        previewImage.style.display = "block";
-      }
-      if (uploadContent) {
-        uploadContent.style.display = "none";
-      }
-    };
-    reader.readAsDataURL(file);
-
-    // 🔹 Upload to Cloudinary
-    const formData = new FormData();
-    formData.append("file", file);
-    formData.append("upload_preset", "almapro_upload");
-
-    try {
-      const res = await fetch("https://api.cloudinary.com/v1_1/dxepkw1qb/image/upload", {
-        method: "POST",
-        body: formData
-      });
-
-      const data = await res.json();
-
-      // Save URL for Formspree
-      photoUrlInput.value = data.secure_url;
-
-      uploadFinished = true; // ✅ upload complete
-
-    } catch (err) {
-      alert("Upload failed ❌");
-    }
-
-  });
-
-  // Make uploadFinished available globally
-  window.uploadFinished = () => uploadFinished;
 
 });
 </script>
