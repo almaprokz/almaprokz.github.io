@@ -64,11 +64,14 @@
 <!-- APPLY FORM -->
 <section class="apply-form">
   <div class="form-wrapper">
-
     <div class="form-inner">
 
       <form action="https://formsubmit.co/almapro.contact@proton.me" method="POST" enctype="multipart/form-data">
+
+        <!-- SETTINGS -->
+        <input type="hidden" name="_subject" value="New Application - AlmaPro">
         <input type="hidden" name="_next" value="https://almapro.kz/success.html">
+        <input type="hidden" name="_captcha" value="false">
 
         <!-- BASIC -->
         <div class="form-block">
@@ -95,7 +98,7 @@
 
         <!-- PROFESSIONAL -->
         <div class="form-block">
-          <h3>Professional information</h3>
+          <h3>Professional Information</h3>
 
           <div class="form-row">
             <input type="text" name="experience" placeholder="Years of experience">
@@ -110,6 +113,7 @@
             <div class="tag">Live-in</div>
             <div class="tag">Live-out</div>
           </div>
+
           <input type="hidden" name="schedule" id="scheduleInput">
         </div>
 
@@ -125,52 +129,44 @@
 
         <!-- ABOUT -->
         <div class="form-block">
-          <h3>About you</h3>
+          <h3>About You</h3>
 
-          <textarea id="about" name="about" maxlength="300"
+          <textarea name="about" maxlength="300"
             placeholder="Tell us about your experience working with families"></textarea>
 
           <div class="char-count">0 / 300</div>
         </div>
 
-<!-- PROFILE PHOTO -->
-<div class="form-block">
-  <h3>Profile Photo</h3>
+        <!-- PROFILE PHOTO -->
+        <div class="form-block">
+          <h3>Profile Photo</h3>
 
-  <label class="upload-box">
+          <label class="upload-box">
 
-    <!-- FILE INPUT -->
-    <input type="file" id="photoInput" accept="image/*">
+            <!-- REAL FILE INPUT (IMPORTANT) -->
+            <input type="file" id="photoInput" name="photo" accept="image/*" required>
 
-    <!-- UPLOAD UI -->
-    <div class="upload-content" id="uploadContent">
-      <div class="upload-icon">📷</div>
-      <p>Upload Photo</p>
-      <span>JPG, PNG | clean professional photo</span>
-    </div>
+            <!-- UI -->
+            <div class="upload-content" id="uploadContent">
+              <div class="upload-icon">📷</div>
+              <p>Upload Photo</p>
+              <span>JPG, PNG | clean professional photo</span>
+            </div>
 
-    <!-- IMAGE PREVIEW -->
-    <img id="previewImage" alt="Preview" />
+            <!-- PREVIEW -->
+            <img id="previewImage" alt="Preview" style="display:none; width:100%; margin-top:10px;" />
 
-  </label>
+          </label>
+        </div>
 
-  <!-- HIDDEN INPUT (VERY IMPORTANT) -->
-  <input type="file" name="photo" required>
-
-</div>
-
-       <form action="https://formsubmit.co/almapro.contact@proton.me" method="POST" enctype="multipart/form-data">
-
-  <input type="hidden" name="_subject" value="New Application - AlmaPro">
-  <input type="hidden" name="_next" value="https://almapro.kz/success.html">
-
-<!-- SUBMIT -->
-<button type="submit" class="btn btn-primary">Submit for Review</button>
+        <!-- SUBMIT -->
+        <button type="submit" class="btn btn-primary">
+          Submit for Review
+        </button>
 
       </form>
 
     </div>
-
   </div>
 </section>
 
@@ -209,6 +205,25 @@
   </div>
 </footer>
 
+<!--preview-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const input = document.getElementById("photoInput");
+  const preview = document.getElementById("previewImage");
+
+  input.addEventListener("change", () => {
+    const file = input.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = e => {
+      preview.src = e.target.result;
+      preview.style.display = "block";
+    };
+    reader.readAsDataURL(file);
+  });
+});
+</script>
 
 <script>
 window.addEventListener("scroll", function() {
